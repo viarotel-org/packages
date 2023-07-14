@@ -1,0 +1,11 @@
+{
+  "name": "packages",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "float-bubble": "workspace:^",
+    "lerna": "^7.1.3"
+  }
+}
