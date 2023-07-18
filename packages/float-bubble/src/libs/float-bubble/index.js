@@ -1,7 +1,7 @@
 import FloatBubble from './components/index.vue'
 
 export default {
-  install(Vue) {
-    Vue.component('FloatBubble', FloatBubble)
+  install(app) {
+    app.component('FloatBubble', FloatBubble)
   },
 }

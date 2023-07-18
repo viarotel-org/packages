@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-demi": "^0.14.5"
   },
   "devDependencies": {
     "@unocss/reset": "^0.53.5",
