@@ -29,8 +29,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "pnpm run lint:js",
-    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix",
-    "publish": "npm publish"
+    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
@@ -54,5 +53,5 @@
     "vite-plugin-libcss": "^1.1.1",
     "vue-eslint-parser": "^9.3.1"
   },
-  "gitHead": "45cd04e277e08efe7c9004f5f5202d56904dff5a"
+  "gitHead": "6b309e351aecb8b5320dbdd21257a25f73a06375"
 }
