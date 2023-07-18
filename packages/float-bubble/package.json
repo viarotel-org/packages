@@ -6,10 +6,8 @@
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
-  "main": "lib/float-bubble.js",
-  "directories": {
-    "lib": "libs"
-  },
+  "main": "dist/float-bubble.umd.cjs",
+  "module": "dist/float-bubble.js",
   "files": [
     "dist"
   ],
