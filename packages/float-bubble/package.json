@@ -2,7 +2,6 @@
   "name": "float-bubble",
   "type": "module",
   "version": "0.0.3",
-  "git-checks": false,
   "description": "float-bubble vue component",
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",

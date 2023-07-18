@@ -1,7 +1,5 @@
 {
   "name": "packages",
-  "private": true,
-  "git-checks": false,
   "workspaces": [
     "packages/*"
   ],
