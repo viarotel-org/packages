@@ -3,6 +3,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "publish": "pnpm lerna publish --no-private"
+  },
   "devDependencies": {
     "float-bubble": "workspace:^",
     "lerna": "^7.1.3"
