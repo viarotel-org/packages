@@ -1,8 +1,8 @@
-38 error Error: Command failed with exit code 128: git tag v0.0.1 -m v0.0.1
-38 error fatal: tag 'v0.0.1' already exists
-38 error     at makeError (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\lib\error.js:60:11)
-38 error     at handlePromise (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\index.js:118:26)
-38 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-38 error     at async VersionCommand.gitCommitAndTagVersion (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+lerna@7.1.3\node_modules\lerna\dist\index.js:8377:9)
-38 error     at async VersionCommand.commitAndTagUpdates (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+lerna@7.1.3\node_modules\lerna\dist\index.js:8347:18)
-38 error     at async Promise.all (index 0)
+40 error Error: Command failed with exit code 128: git tag v0.0.1 -m v0.0.1
+40 error fatal: tag 'v0.0.1' already exists
+40 error     at makeError (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\lib\error.js:60:11)
+40 error     at handlePromise (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\index.js:118:26)
+40 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+40 error     at async VersionCommand.gitCommitAndTagVersion (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+lerna@7.1.3\node_modules\lerna\dist\index.js:8377:9)
+40 error     at async VersionCommand.commitAndTagUpdates (D:\viarotel\Works\Web\__me__\packages\node_modules\.pnpm\registry.npmmirror.com+lerna@7.1.3\node_modules\lerna\dist\index.js:8347:18)
+40 error     at async Promise.all (index 0)
