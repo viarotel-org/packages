@@ -47,10 +47,8 @@
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
     "unocss": "^0.53.5",
-    "unplugin-inspector-lib-css": "^0.0.5",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-libcss": "^1.1.1",
     "vue-eslint-parser": "^9.3.1"
   }
 }

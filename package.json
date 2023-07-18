@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "float-bubble": "workspace:^",
+    "@viarotel-org/float-bubble": "workspace:^",
     "lerna": "^7.1.3"
   }
 }
