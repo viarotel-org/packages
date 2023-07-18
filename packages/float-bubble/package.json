@@ -1,29 +1,57 @@
 {
   "name": "float-bubble",
-  "version": "0.0.0",
+  "type": "module",
+  "version": "0.0.1",
+  "git-checks": false,
   "description": "float-bubble vue component",
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
   "main": "lib/float-bubble.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "libs"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
-    "registry": "https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
   },
-  "scripts": {
-    "test": "node ./__tests__/float-bubble.test.js"
-  },
   "bugs": {
     "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "pnpm run lint:js",
+    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@unocss/reset": "^0.53.5",
+    "@unocss/transformer-directives": "^0.53.5",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-vue": "^9.15.1",
+    "postcss-nested": "^6.0.1",
+    "postcss-remove-inline-comments": "^0.0.2",
+    "postcss-scss": "^4.0.6",
+    "unocss": "^0.53.5",
+    "unplugin-inspector-lib-css": "^0.0.5",
+    "vite": "^4.4.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-libcss": "^1.1.1",
+    "vue-eslint-parser": "^9.3.1"
   }
 }
