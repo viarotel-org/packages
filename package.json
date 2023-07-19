@@ -5,7 +5,7 @@
   ],
   "scripts": {
     "clean": "pnpm lerna clean",
-    "release": "pnpm lerna publish --no-private"
+    "release": "pnpm lerna publish --no-private --loglevel verbose"
   },
   "devDependencies": {
     "@viarotel-org/float-bubble": "workspace:^",
