@@ -333,7 +333,8 @@ export default {
       }
 
       this.mousemoveTime = new Date().getTime()
-      if (this.mousemoveTime - this.mousedownTime < 100) {
+      if (this.mousemoveTime - this.mousedownTime < 50) {
+        this.draggable = false
         return
       }
 
@@ -353,4 +354,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="postcss">
+.float-bubble {
+  @apply cursor-pointer absolute z-2999;
+  .float-bubble-default {
+    @apply rounded-full shadow-lg flex items-center justify-center border bg-white text-xs hover:bg-gray-100 !active:bg-gray-200 p-1;
+  }
+}
+</style>

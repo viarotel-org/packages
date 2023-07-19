@@ -1,6 +1,0 @@
-.float-bubble {
-  @apply cursor-pointer absolute z-2999;
-  .float-bubble-default {
-    @apply rounded-full shadow-lg flex items-center justify-center border bg-white text-xs hover:bg-gray-100 !active:bg-gray-200 p-1;
-  }
-}
