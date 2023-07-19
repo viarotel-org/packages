@@ -3,6 +3,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "clean": "pnpm lerna clean",
+    "publish": "pnpm lerna publish --no-private"
+  },
   "devDependencies": {
     "@viarotel-org/float-bubble": "workspace:^",
     "lerna": "^7.1.3"
