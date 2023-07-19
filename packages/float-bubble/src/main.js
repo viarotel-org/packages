@@ -1,11 +1,12 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue-demi'
 import App from './App.vue'
 import libs from './libs/index'
 
-import 'virtual:uno.css'
 import './styles/index'
 
 const app = createApp(App)
+
+console.log('app', app)
 
 app.use(libs)
 

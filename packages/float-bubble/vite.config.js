@@ -1,13 +1,11 @@
-import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import vue from '@vitejs/plugin-vue'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import postcssConfig from './postcss.config.js'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [useEslint(), useUnoCSS(), vue()],
+export default {
+  plugins: [useEslint(), useUnoCSS()],
   css: {
     postcss: postcssConfig,
   },
@@ -29,4 +27,4 @@ export default defineConfig({
       },
     },
   },
-})
+}

@@ -14,7 +14,7 @@
   },
   "files": [
     "./dist/*",
-    "./src/libs/*"
+    "./src/*"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -28,24 +28,27 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "pnpm switch:vue3 && vite --config vite.config.vue3.js",
+    "dev:vue2": "pnpm switch:vue2 && vite --config vite.config.vue2.js",
+    "build": "pnpm build:vue2 && pnpm build:vue3",
+    "build:vue2": "pnpm switch:vue2 && vite --config vite.config.vue2.js build",
+    "build:vue3": "pnpm switch:vue3 && vite --config vite.config.vue3.js build",
+    "switch:vue3": "vue-demi-switch 3",
+    "switch:vue2": "vue-demi-switch 2 vue2",
     "preview": "vite preview",
-    "switch:2.7": "vue-demi-switch 2.7 vue2.7",
-    "switch:2": "vue-demi-switch 2 vue2",
-    "switch:3": "vue-demi-switch 3",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.1",
     "lodash-es": "^4.17.21",
-    "vue": "^3.3.4",
-    "vue-demi": "^0.14.5"
+    "vue-demi": "latest"
   },
   "devDependencies": {
     "@unocss/reset": "^0.53.5",
     "@unocss/transformer-directives": "^0.53.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue2": "^2.2.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
@@ -56,14 +59,18 @@
     "unocss": "^0.53.5",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
+    "vue": "^3.3.4",
     "vue-eslint-parser": "^9.3.1",
-    "vue2": "npm:vue@^2.6",
-    "vue2.7": "npm:vue@^2.7.10"
+    "vue-template-compiler": "^2.7.14",
+    "vue2": "npm:vue@^2.7.14"
   },
   "peerDependencies": {
-    "vue": "^2.6.0 || ^3.3.4"
+    "@vue/composition-api": "^1.7.1",
+    "vue": "^2.0.0 || ^3.0.0"
   },
-  "optionalDependencies": {
-    "@vue/composition-api": "^1.7.1"
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   }
 }

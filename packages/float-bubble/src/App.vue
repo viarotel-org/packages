@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-
-const magneted = ref(true)
+const magneted = true
 
 const onAdsorb = (event) => {
   console.log('onAdsorb.event', event)

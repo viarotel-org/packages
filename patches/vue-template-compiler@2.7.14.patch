@@ -1,0 +1,11 @@
+diff --git a/index.js b/index.js
+index 378a17dfa24058ae2d64d0a2123bf211589ed063..75451ae10950a944c58b5215e4aec0a149af9efb 100644
+--- a/index.js
++++ b/index.js
+@@ -1,5 +1,5 @@
+ try {
+-  var vueVersion = require('vue').version
++  var vueVersion = require('vue2').version || require('vue').version
+ } catch (e) {}
+ 
+ var packageName = require('./package.json').name
