@@ -18,6 +18,7 @@ export default {
       entry: resolve(__dirname, 'src/libs/index.js'),
       name: 'FloatBubble',
       fileName: 'float-bubble',
+      formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
       external: ['vue', 'vue-demi'],
@@ -26,5 +27,6 @@ export default {
         manualChunks: undefined,
       },
     },
+    minify: false,
   },
 }

@@ -1,31 +1,11 @@
 {
-  "name": "@viarotel-org/float-bubble",
+  "name": "playground",
   "type": "module",
   "version": "0.1.0",
-  "description": "float-bubble vue component",
+  "description": "playground",
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
-  "main": "dist/float-bubble.umd.cjs",
-  "module": "dist/float-bubble.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue3/float-bubble.js",
-      "require": "./dist/vue3/float-bubble.cjs"
-    },
-    "./style": "./dist/vue3/style.css",
-    "./vue2": "./dist/vue2/float-bubble.js",
-    "./vue3": "./dist/vue3/float-bubble.js",
-    "./core": "./src/libs/float-bubble/index.js"
-  },
-  "files": [
-    "./dist/*",
-    "./src/*"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
@@ -69,14 +49,5 @@
     "vue-eslint-parser": "^9.3.1",
     "vue-template-compiler": "^2.7.14",
     "vue2": "npm:vue@^2.7.14"
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.7.1",
-    "vue": "^2.0.0 || ^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
   }
 }
