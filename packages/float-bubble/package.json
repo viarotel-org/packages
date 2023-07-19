@@ -9,8 +9,12 @@
   "main": "dist/float-bubble.umd.cjs",
   "module": "dist/float-bubble.js",
   "exports": {
-    "import": "./dist/float-bubble.js",
-    "require": "./dist/float-bubble.umd.js"
+    "import": "./dist/vue3/float-bubble.js",
+    "require": "./dist/vue3/float-bubble.umd.js",
+    "style": "./dist/vue3/style.css",
+    "vue2": "./dist/vue2/float-bubble.js",
+    "vue3": "./dist/vue3/float-bubble.js",
+    "core": "./src/libs/float-bubble/index.js"
   },
   "files": [
     "./dist/*",
