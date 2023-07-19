@@ -1,11 +1,12 @@
 import 'virtual:uno.css'
 import { install } from 'vue-demi'
-import { FloatBubble } from './float-bubble/index'
+import FloatBubble from './float-bubble/index'
+
+install()
 
 export default {
   install(app) {
-    install(app)
-    app.component('FloatBubble', FloatBubble)
+    app.use(FloatBubble)
   },
 }
 

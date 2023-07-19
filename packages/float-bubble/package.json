@@ -6,17 +6,21 @@
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
-  "main": "dist/float-bubble.umd.cjs",
-  "module": "dist/float-bubble.js",
+  "main": "./dist/vue2/float-bubble.js",
+  "module": "./dist/vue3/float-bubble.js",
   "exports": {
     ".": {
       "import": "./dist/vue3/float-bubble.js",
-      "require": "./dist/vue3/float-bubble.cjs"
+      "require": "./dist/vue2/float-bubble.cjs"
     },
     "./style": "./dist/vue3/style.css",
-    "./vue2": "./dist/vue2/float-bubble.js",
     "./vue3": "./dist/vue3/float-bubble.js",
-    "./core": "./src/libs/float-bubble/index.js"
+    "./vue2": "./dist/vue2/float-bubble.js",
+    "./core": "./src/libs/float-bubble/index.js",
+    "./vue2/common": "./dist/vue2/float-bubble.cjs",
+    "./vue2/browser": "./dist/vue2/float-bubble.umd.cjs",
+    "./vue3/common": "./dist/vue3/float-bubble.cjs",
+    "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs"
   },
   "files": [
     "./dist/*",
