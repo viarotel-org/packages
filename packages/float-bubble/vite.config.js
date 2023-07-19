@@ -4,25 +4,28 @@ import vue from '@vitejs/plugin-vue'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import postcssConfig from './postcss.config.js'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [useEslint(), useUnoCSS(), vue()],
   css: {
     postcss: postcssConfig,
   },
+  optimizeDeps: {
+    exclude: ['vue-demi'],
+  },
   build: {
+    outDir: 'dist',
     lib: {
-      // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/libs/index.js'),
       name: 'FloatBubble',
       fileName: 'float-bubble',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-demi'],
       output: {
-        globals: {
-          vue: 'Vue',
-        },
+        exports: 'named',
+        manualChunks: undefined,
       },
     },
   },

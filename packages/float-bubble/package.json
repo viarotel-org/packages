@@ -8,8 +8,13 @@
   "license": "ISC",
   "main": "dist/float-bubble.umd.cjs",
   "module": "dist/float-bubble.js",
+  "exports": {
+    "import": "./dist/float-bubble.js",
+    "require": "./dist/float-bubble.umd.js"
+  },
   "files": [
-    "dist"
+    "./dist/*",
+    "./src/libs/*"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -26,6 +31,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "switch:2.7": "vue-demi-switch 2.7 vue2.7",
+    "switch:2": "vue-demi-switch 2 vue2",
+    "switch:3": "vue-demi-switch 3",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix"
   },
@@ -48,6 +56,14 @@
     "unocss": "^0.53.5",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vue-eslint-parser": "^9.3.1"
+    "vue-eslint-parser": "^9.3.1",
+    "vue2": "npm:vue@^2.6",
+    "vue2.7": "npm:vue@^2.7.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0 || ^3.3.4"
+  },
+  "optionalDependencies": {
+    "@vue/composition-api": "^1.7.1"
   }
 }

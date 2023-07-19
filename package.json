@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pnpm lerna run build",
     "clean": "pnpm lerna clean",
-    "release": "pnpm lerna publish --no-private --loglevel verbose"
+    "release": "pnpm build && pnpm lerna publish --no-private --loglevel verbose"
   },
   "devDependencies": {
     "@viarotel-org/float-bubble": "workspace:^",

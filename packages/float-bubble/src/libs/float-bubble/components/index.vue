@@ -1,5 +1,6 @@
 <script setup>
 import {
+  install,
   ref,
   reactive,
   defineProps,
@@ -12,6 +13,8 @@ import {
 } from 'vue-demi'
 import { debounce } from 'lodash-es'
 import { createComposeWriteProps } from './helper'
+
+install()
 
 const props = defineProps({
   offset: {
