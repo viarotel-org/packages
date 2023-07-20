@@ -105,8 +105,7 @@ export default {
       const top = this.writeOffset.y
       const left = this.writeOffset.x
       return {
-        top: `${top}px`,
-        left: `${left}px`,
+        transform: `translate(${left}px, ${top}px)`,
       }
     },
     halfRect() {
