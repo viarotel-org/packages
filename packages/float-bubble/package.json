@@ -6,12 +6,12 @@
   "author": "viarotel <viarotel@qq.com>",
   "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
-  "main": "./dist/vue2/float-bubble.js",
   "module": "./dist/vue3/float-bubble.js",
+  "main": "./dist/vue3/float-bubble.cjs",
   "exports": {
     ".": {
       "import": "./dist/vue3/float-bubble.js",
-      "require": "./dist/vue2/float-bubble.cjs"
+      "require": "./dist/vue3/float-bubble.cjs"
     },
     "./style": "./dist/vue3/style.css",
     "./vue3": "./dist/vue3/float-bubble.js",
@@ -28,7 +28,8 @@
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "access": "public",
+    "tag": "latest"
   },
   "repository": {
     "type": "git",
