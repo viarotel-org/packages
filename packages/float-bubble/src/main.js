@@ -6,8 +6,6 @@ import './styles/index'
 
 const app = createApp(App)
 
-console.log('app', app)
-
 app.use(libs)
 
 app.mount('#app')

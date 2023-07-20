@@ -8,6 +8,9 @@
       "access": "public",
       "npmClient": "npm",
       "tag": "latest"
+    },
+    "version": {
+      "changelog": true
     }
   }
 }
