@@ -11,7 +11,7 @@ import {
   unref,
 } from 'vue-demi'
 import { debounce } from 'lodash-es'
-import { createComposeWriteProps } from './helper'
+import { createComposeWriteProps } from '@/utils/index.js'
 
 const props = defineProps({
   offset: {

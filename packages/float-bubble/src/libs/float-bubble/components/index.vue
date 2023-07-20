@@ -33,7 +33,7 @@
 
 <script>
 import { debounce } from 'lodash-es'
-import { createWriteProps } from './helper'
+import { createWriteProps } from '@/utils/index.js'
 
 const writeProps = createWriteProps(['offset'])
 

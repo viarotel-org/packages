@@ -6,6 +6,11 @@ import postcssConfig from './postcss.config.js'
 // https://vitejs.dev/config/
 export default {
   plugins: [useEslint(), useUnoCSS()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src/'),
+    },
+  },
   css: {
     postcss: postcssConfig,
   },

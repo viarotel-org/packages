@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "build": "pnpm lerna run build",
+    "changelog":"pnpm lerna version --conventional-commits",
     "clean": "pnpm lerna clean",
     "release": "pnpm lerna publish --no-private --loglevel verbose"
   },
