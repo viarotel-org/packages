@@ -324,8 +324,6 @@ export default {
       }
     },
     onMousemove(event) {
-      event.preventDefault()
-
       if (!this.draggable) {
         return
       }
@@ -344,7 +342,6 @@ export default {
       this.setOffset({ x, y })
     },
     onMouseleave(event) {
-      event.preventDefault()
       this.draggable = false
       this.onMouseup()
     },

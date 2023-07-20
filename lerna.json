@@ -3,13 +3,29 @@
   "version": "0.1.6",
   "npmClient": "pnpm",
   "command": {
-    "publish": {
+    "create": {
+      "bin": "",
+      "homepage": "https://github.com/viarotel-org/packages#readme",
       "registry": "https://registry.npmjs.org/",
+      "description": "viarotel's package",
       "access": "public",
+      "private": false,
+      "esModule": true,
+      "yes": true
+    },
+    "publish": {
       "npmClient": "npm",
-      "tag": "latest"
+      "private": false,
+      "tag": "latest",
+      "loglevel": "verbose"
     },
     "version": {
+      "ignoreChanges": [
+        "**/__tests__/**",
+        "**/*.md"
+      ],
+      "changelogPreset": "angular",
+      "conventionalCommits": true,
       "changelog": true
     }
   }
