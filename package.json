@@ -4,9 +4,10 @@
     "packages/*"
   ],
   "scripts": {
+    
     "build": "pnpm lerna run build",
     "clean": "pnpm lerna clean",
-    "release": "lerna publish --no-private --loglevel verbose"
+    "release": "pnpm lerna publish --no-private --loglevel verbose"
   },
   "devDependencies": {
     "@viarotel-org/float-bubble": "workspace:^",
