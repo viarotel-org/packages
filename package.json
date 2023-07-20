@@ -4,7 +4,6 @@
     "packages/*"
   ],
   "scripts": {
-    
     "build": "pnpm lerna run build",
     "clean": "pnpm lerna clean",
     "release": "pnpm lerna publish --no-private --loglevel verbose"
