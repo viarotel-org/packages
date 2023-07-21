@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vite-config-vue",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@qq.com>",
   "license": "ISC",
