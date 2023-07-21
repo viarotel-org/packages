@@ -155,7 +155,7 @@ export default {
         ...value,
       }
     },
-    adsorbRule({ offsetX, offsetY }) {
+    adsorbRule({ offsetX }) {
       const value = {
         offset: { ...this.writeOffset },
       }
@@ -170,7 +170,7 @@ export default {
       }
       return value
     },
-    magnetRule({ offsetX, offsetY }) {
+    magnetRule({ offsetX }) {
       const y = 0
       let x = 0
 
