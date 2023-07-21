@@ -1,11 +1,19 @@
 {
   "name": "@viarotel-org/vite-config-vue2s",
+  "type": "module",
   "version": "0.1.7",
   "description": "viarotel's package",
-  "keywords": [],
   "author": "viarotel <viarotel@qq.com>",
-  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue2s#readme",
   "license": "ISC",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue2s#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "keywords": [],
   "main": "src/index.js",
   "module": "src/index.js",
   "directories": {
@@ -17,16 +25,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viarotel-org/packages.git"
-  },
   "scripts": {
     "test": "node ./__tests__/@viarotel-org/vite-config-vue2s.test.js"
-  },
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/viarotel-org/packages/issues"
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.2.0",

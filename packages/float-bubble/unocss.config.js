@@ -23,12 +23,12 @@ export default defineConfig({
   safelist: [],
   theme: {
     colors: {
-      // @ts-ignore
+      // @ts-expect-error
       gray: windPresetConfig.theme.colors.neutral,
       primary,
     },
     boxShadow: {
-      el: 'var(--el-box-shadow)',
+      "el": 'var(--el-box-shadow)',
       'el-light': 'var(--el-box-shadow-light)',
       'el-lighter': 'var(--el-box-shadow-lighter)',
       'el-dark': 'var(--el-box-shadow-dark)',

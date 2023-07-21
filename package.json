@@ -3,13 +3,13 @@
   "description": "viarotel's packages",
   "scripts": {
     "lint": "pnpm lint:js",
-    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix",
+    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --ignore-path .eslintignore --fix",
     "clean": "lerna clean",
     "build": "lerna run build",
     "release": "lerna publish"
   },
   "devDependencies": {
-    "@nx/nx-win32-x64-msvc": "^16.5.3",
+    "@antfu/eslint-config": "^0.39.8",
     "@unocss/reset": "^0.53.5",
     "@unocss/transformer-directives": "^0.53.5",
     "eslint": "^8.45.0",

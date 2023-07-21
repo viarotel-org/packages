@@ -4,14 +4,19 @@
   "version": "0.1.7",
   "description": "Vue-based Float-Bubble component",
   "author": "viarotel <viarotel@qq.com>",
-  "homepage": "https://github.com/viarotel-org/packages#readme",
   "license": "ISC",
-  "module": "./dist/vue3/float-bubble.js",
-  "main": "./dist/vue3/float-bubble.cjs",
+  "homepage": "https://github.com/viarotel-org/packages#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
   "exports": {
     ".": {
-      "import": "./dist/vue3/float-bubble.js",
-      "require": "./dist/vue3/float-bubble.cjs"
+      "require": "./dist/vue3/float-bubble.cjs",
+      "import": "./dist/vue3/float-bubble.js"
     },
     "./style": "./dist/vue3/style.css",
     "./vue3": "./dist/vue3/float-bubble.js",
@@ -25,6 +30,8 @@
     "./vue3/common": "./dist/vue3/float-bubble.cjs",
     "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs"
   },
+  "main": "./dist/vue3/float-bubble.cjs",
+  "module": "./dist/vue3/float-bubble.js",
   "files": [
     "./dist/*",
     "./src/*"
@@ -33,13 +40,6 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public",
     "tag": "latest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viarotel-org/packages.git"
-  },
-  "bugs": {
-    "url": "https://github.com/viarotel-org/packages/issues"
   },
   "scripts": {
     "dev": "pnpm dev:3",
@@ -55,6 +55,9 @@
     "switch:2": "vue-demi-switch 2 vue2",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "vue": "^2.6.14 || ^3.3.4"
+  },
   "dependencies": {
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
@@ -67,8 +70,5 @@
     "vue2": "npm:vue@~2.6.14",
     "vue2s": "npm:vue@^2.7.14",
     "vue3": "npm:vue@^3.3.4"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.14 || ^3.3.4"
   }
 }

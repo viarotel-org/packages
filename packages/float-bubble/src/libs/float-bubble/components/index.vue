@@ -1,36 +1,3 @@
-<template>
-  <div
-    ref="floatBubble"
-    class="float-bubble"
-    :style="[offsetStyle, transitionStyle]"
-    @mousedown.prevent="onMousedown"
-    @mouseup.prevent="onMouseup"
-  >
-    <slot>
-      <div
-        class="float-bubble-default"
-        :style="[sizeStyle]"
-        :class="[bubbleClass]"
-      >
-        <span v-if="text">{{ text }}</span>
-        <img
-          v-else-if="image"
-          :src="image"
-          alt=""
-          class="w-2/3"
-        />
-        <span
-          v-else
-          class="text-center"
-        >
-          {{ writeOffset.x }} <br />
-          {{ writeOffset.y }}
-        </span>
-      </div>
-    </slot>
-  </div>
-</template>
-
 <script>
 import { debounce } from 'lodash-es'
 import { createWriteProps } from '@/utils/index.js'
@@ -115,9 +82,9 @@ export default {
       }
     },
     transitionStyle() {
-      if (!this.transition) {
+      if (!this.transition)
         return ''
-      }
+
       return {
         'transition-property': 'all',
         'transition-duration': '300ms',
@@ -192,24 +159,23 @@ export default {
       const value = {
         offset: { ...this.writeOffset },
       }
-      if (offsetX >= this.parentRect.width - this.floatRect.width) {
+      if (offsetX >= this.parentRect.width - this.floatRect.width)
         value.type = 'right'
-      } else if (offsetX <= 0) {
+      else if (offsetX <= 0)
         value.type = 'left'
-      } else {
+      else
         value.type = 'none'
-      }
+
       return value
     },
     magnetRule({ offsetX, offsetY }) {
       const y = 0
       let x = 0
 
-      if (offsetX > this.parentRect.width / 2 - this.halfRect.width) {
+      if (offsetX > this.parentRect.width / 2 - this.halfRect.width)
         x = this.parentRect.width - this.floatRect.width - this.gapX
-      } else {
+      else
         x = this.gapX
-      }
 
       return {
         x,
@@ -220,21 +186,17 @@ export default {
       let y = 0
       let x = 0
 
-      if (offsetY >= this.halfRect.height) {
+      if (offsetY >= this.halfRect.height)
         y = offsetY - this.halfRect.height
-      }
 
-      if (offsetX >= this.halfRect.width) {
+      if (offsetX >= this.halfRect.width)
         x = offsetX - this.halfRect.width
-      }
 
-      if (offsetY >= this.parentRect.height - this.halfRect.height) {
+      if (offsetY >= this.parentRect.height - this.halfRect.height)
         y = this.parentRect.height - this.floatRect.height
-      }
 
-      if (offsetX >= this.parentRect.width - this.halfRect.width) {
+      if (offsetX >= this.parentRect.width - this.halfRect.width)
         x = this.parentRect.width - this.floatRect.width
-      }
 
       return {
         x,
@@ -253,7 +215,8 @@ export default {
             - this.halfRect.height
             - this.position.bottom,
         })
-      } else if (
+      }
+      else if (
         typeof this.position.bottom === 'number'
         && typeof this.position.left === 'number'
       ) {
@@ -264,7 +227,8 @@ export default {
             - this.halfRect.height
             - this.position.bottom,
         })
-      } else if (
+      }
+      else if (
         this.position.bottom === 'center'
         && typeof this.position.right == 'number'
       ) {
@@ -272,7 +236,8 @@ export default {
           x: this.parentRect.width - this.halfRect.width - this.position.right,
           y: this.parentRect.height / 2 - this.halfRect.height,
         })
-      } else if (
+      }
+      else if (
         this.position.bottom === 'center'
         && typeof this.position.left == 'number'
       ) {
@@ -301,18 +266,16 @@ export default {
       //   return
       // }
 
-      if (!this.magnet) {
+      if (!this.magnet)
         return
-      }
 
       const adsorb = this.adsorbRule({
         offsetX: this.writeOffset.x,
         offsetY: this.writeOffset.y,
       })
 
-      if (adsorb.type !== 'none') {
+      if (adsorb.type !== 'none')
         return
-      }
 
       const value = this.magnetRule({
         offsetX: this.writeOffset.x,
@@ -324,9 +287,8 @@ export default {
       }
     },
     onMousemove(event) {
-      if (!this.draggable) {
+      if (!this.draggable)
         return
-      }
 
       this.mousemoveTime = new Date().getTime()
       if (this.mousemoveTime - this.mousedownTime < 50) {
@@ -348,6 +310,39 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div
+    ref="floatBubble"
+    class="float-bubble"
+    :style="[offsetStyle, transitionStyle]"
+    @mousedown.prevent="onMousedown"
+    @mouseup.prevent="onMouseup"
+  >
+    <slot>
+      <div
+        class="float-bubble-default"
+        :style="[sizeStyle]"
+        :class="[bubbleClass]"
+      >
+        <span v-if="text">{{ text }}</span>
+        <img
+          v-else-if="image"
+          :src="image"
+          alt=""
+          class="w-2/3"
+        >
+        <span
+          v-else
+          class="text-center"
+        >
+          {{ writeOffset.x }} <br>
+          {{ writeOffset.y }}
+        </span>
+      </div>
+    </slot>
+  </div>
+</template>
 
 <style lang="postcss">
 .float-bubble {

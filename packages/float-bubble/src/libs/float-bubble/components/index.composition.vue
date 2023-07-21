@@ -1,14 +1,12 @@
 <script setup>
 import {
-  ref,
-  reactive,
-  defineProps,
+  computed,
   defineEmits,
+  defineProps,
   onMounted,
   onUnmounted,
-  computed,
+  ref,
   watch,
-  unref,
 } from 'vue-demi'
 import { debounce } from 'lodash-es'
 import { createComposeWriteProps } from '@/utils/index.js'
@@ -104,7 +102,7 @@ const emitAdsorb = debounce((...params) => {
   emit('adsorb', ...params)
 }, 500)
 
-const setPosition = () => {
+function setPosition() {
   if (
     typeof props.position.bottom === 'number'
     && typeof props.position.right === 'number'
@@ -114,7 +112,8 @@ const setPosition = () => {
       y:
         parentRect.value.height - halfRect.value.height - props.position.bottom,
     })
-  } else if (
+  }
+  else if (
     typeof props.position.bottom === 'number'
     && typeof props.position.left === 'number'
   ) {
@@ -123,7 +122,8 @@ const setPosition = () => {
       y:
         parentRect.value.height - halfRect.value.height - props.position.bottom,
     })
-  } else if (
+  }
+  else if (
     props.position.bottom === 'center'
     && typeof props.position.right == 'number'
   ) {
@@ -131,7 +131,8 @@ const setPosition = () => {
       x: parentRect.value.width - halfRect.value.width - props.position.right,
       y: parentRect.value.height / 2 - halfRect.value.height,
     })
-  } else if (
+  }
+  else if (
     props.position.bottom === 'center'
     && typeof props.position.left == 'number'
   ) {
@@ -142,7 +143,7 @@ const setPosition = () => {
   }
 }
 
-const setOffset = (value) => {
+function setOffset(value) {
   value = safeRule({
     offsetX: value.x,
     offsetY: value.y,
@@ -152,32 +153,31 @@ const setOffset = (value) => {
   console.log('writeOffset.value', writeOffset.value)
 }
 
-const adsorbUpdate = () => {
+function adsorbUpdate() {
   writeOffset.value = { ...writeOffset.value }
 }
 
-const adsorbRule = ({ offsetX }) => {
+function adsorbRule({ offsetX }) {
   const value = {
     offset: { ...writeOffset.value },
   }
-  if (offsetX >= parentRect.value.width - floatRect.value.width) {
+  if (offsetX >= parentRect.value.width - floatRect.value.width)
     value.type = 'right'
-  } else if (offsetX <= 0) {
+  else if (offsetX <= 0)
     value.type = 'left'
-  } else {
+  else
     value.type = 'none'
-  }
+
   return value
 }
 
-const magnetRule = ({ offsetX }) => {
+function magnetRule({ offsetX }) {
   let magnetX = 0
 
-  if (offsetX > parentRect.value.width / 2 - halfRect.value.width) {
+  if (offsetX > parentRect.value.width / 2 - halfRect.value.width)
     magnetX = parentRect.value.width - floatRect.value.width - gapX.value
-  } else {
+  else
     magnetX = gapX.value
-  }
 
   return {
     x: magnetX,
@@ -185,25 +185,21 @@ const magnetRule = ({ offsetX }) => {
   }
 }
 
-const safeRule = (value) => {
+function safeRule(value) {
   let safeY = 0
   let safeX = 0
 
-  if (value.offsetY >= halfRect.value.height) {
+  if (value.offsetY >= halfRect.value.height)
     safeY = value.offsetY - halfRect.value.height
-  }
 
-  if (value.offsetX >= halfRect.value.width) {
+  if (value.offsetX >= halfRect.value.width)
     safeX = value.offsetX - halfRect.value.width
-  }
 
-  if (value.offsetY >= parentRect.value.height - halfRect.value.height) {
+  if (value.offsetY >= parentRect.value.height - halfRect.value.height)
     safeY = parentRect.value.height - floatRect.height
-  }
 
-  if (value.offsetX >= parentRect.value.width - halfRect.value.width) {
+  if (value.offsetX >= parentRect.value.width - halfRect.value.width)
     safeX = parentRect.value.width - floatRect.width
-  }
 
   return {
     x: safeX,
@@ -212,7 +208,7 @@ const safeRule = (value) => {
 }
 
 let mousedownTime = 0
-const onMousedown = (event) => {
+function onMousedown(event) {
   // console.log('onMousedown.event', event)
 
   mousedownTime = new Date().getTime()
@@ -220,23 +216,21 @@ const onMousedown = (event) => {
   transition.value = false
 }
 
-const onMouseup = (event) => {
+function onMouseup(event) {
   // console.log('onMouseup.event', event)
 
   draggable.value = false
   transition.value = true
 
-  if (!props.magnet) {
+  if (!props.magnet)
     return
-  }
 
   const adsorbValue = adsorbRule({
     offsetX: writeOffset.value.x,
   })
 
-  if (adsorbValue.type !== 'none') {
+  if (adsorbValue.type !== 'none')
     return
-  }
 
   const magnetValue = magnetRule({
     offsetX: writeOffset.value.x,
@@ -248,12 +242,11 @@ const onMouseup = (event) => {
 }
 
 let mousemoveTime = 0
-const onMousemove = (event) => {
+function onMousemove(event) {
   event.preventDefault()
 
-  if (!draggable.value) {
+  if (!draggable.value)
     return
-  }
 
   mousemoveTime = new Date().getTime()
   if (mousemoveTime - mousedownTime < 50) {
@@ -268,13 +261,13 @@ const onMousemove = (event) => {
 
   setOffset({ x, y })
 }
-const onMouseleave = (event) => {
+function onMouseleave(event) {
   event.preventDefault()
   draggable.value = false
   onMouseup()
 }
 
-const onResize = () => {
+function onResize() {
   floatRect.value = floatBubbleRef.value.getBoundingClientRect()
   parentRect.value = parentEl.value.getBoundingClientRect()
 }
@@ -334,12 +327,12 @@ onUnmounted(() => {
           :src="image"
           alt=""
           class="w-2/3"
-        />
+        >
         <span
           v-else
           class="text-center"
         >
-          {{ writeOffset.x }} <br />
+          {{ writeOffset.x }} <br>
           {{ writeOffset.y }}
         </span>
       </div>

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import useVue2s from '@vitejs/plugin-vue2'
-import compiler from '@vue/compiler-sfc'
+import * as compiler from '@vue/compiler-sfc'
 
 export const presetConfig = {
   plugins: [

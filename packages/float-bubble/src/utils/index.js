@@ -1,4 +1,5 @@
 import { camelCase, kebabCase } from 'lodash-es'
+
 // import { ref, computed, unref } from 'vue-demi'
 
 /**
@@ -6,28 +7,30 @@ import { camelCase, kebabCase } from 'lodash-es'
  * @param {*} propNames
  * @returns
  */
-export const createWriteProps = (
-  propNames,
-  { prefix = 'write', emitUpdate = true, setCallback = null } = {},
-) => ({
-  data: propNames.reduce((obj, name) => {
-    obj[camelCase(`temp-${name}`)] = null
-    return obj
-  }, {}),
-  computed: propNames.reduce((obj, name) => {
-    obj[camelCase(`${prefix}-${name}`)] = {
-      get() {
-        return this[camelCase(`temp-${name}`)] || this[name]
-      },
-      set(value) {
-        if (setCallback) setCallback(value)
-        if (emitUpdate) this.$emit(`update:${kebabCase(name)}`, value)
-        this[camelCase(`temp-${name}`)] = value
-      },
-    }
-    return obj
-  }, {}),
-})
+export function createWriteProps(propNames,
+  { prefix = 'write', emitUpdate = true, setCallback = null } = {}) {
+  return {
+    data: propNames.reduce((obj, name) => {
+      obj[camelCase(`temp-${name}`)] = null
+      return obj
+    }, {}),
+    computed: propNames.reduce((obj, name) => {
+      obj[camelCase(`${prefix}-${name}`)] = {
+        get() {
+          return this[camelCase(`temp-${name}`)] || this[name]
+        },
+        set(value) {
+          if (setCallback)
+            setCallback(value)
+          if (emitUpdate)
+            this.$emit(`update:${kebabCase(name)}`, value)
+          this[camelCase(`temp-${name}`)] = value
+        },
+      }
+      return obj
+    }, {}),
+  }
+}
 
 // export const createComposeWriteProps = (
 //   propName,

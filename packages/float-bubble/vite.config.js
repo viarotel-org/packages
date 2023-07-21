@@ -1,11 +1,11 @@
-import { loadEnv, defineConfig } from 'vite'
-import { resolve } from 'path'
+import { resolve } from 'node:path'
+import { defineConfig, loadEnv } from 'vite'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import resolveConfig from '@viarotel-org/vite-config-vue'
 import postcssConfig from './postcss.config.js'
 
-// @ts-ignore
+// @ts-expect-error
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
   const version = env.VITE_VUE_VERSION

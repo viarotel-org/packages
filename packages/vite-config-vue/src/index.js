@@ -1,7 +1,7 @@
 import { mergeConfig } from 'vite'
 
-const viteConfig = async (version = '', config = {}) => {
-  const configModel = (baseConfig) => mergeConfig(baseConfig, config)
+async function viteConfig(version = '', config = {}) {
+  const configModel = baseConfig => mergeConfig(baseConfig, config)
 
   const splitVersion = version.split('.')
   // console.log('splitVersion', splitVersion)
