@@ -16,6 +16,9 @@ importers:
 
   .:
     devDependencies:
+      '@nx/nx-win32-x64-msvc':
+        specifier: ^16.5.3
+        version: registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.3
       '@unocss/reset':
         specifier: ^0.53.5
         version: registry.npmmirror.com/@unocss/reset@0.53.5
@@ -1281,6 +1284,13 @@ packages:
       semver: registry.npmmirror.com/semver@7.5.3
       tmp: registry.npmmirror.com/tmp@0.2.1
       tslib: registry.npmmirror.com/tslib@2.6.0
+    dev: true
+
+  registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.3:
+    resolution: {integrity: sha512-QTpDoqxQq7wSuErkCgQoFegaUZ3D9lgmpS20zexlHm43SwS/MXtqRm9i5XNoJPTx19rpJ7gqaOm6+eOkOYLETg==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-16.5.3.tgz}
+    name: '@nx/nx-win32-x64-msvc'
+    version: 16.5.3
+    engines: {node: '>= 10'}
     dev: true
 
   registry.npmmirror.com/@octokit/auth-token@3.0.4:
