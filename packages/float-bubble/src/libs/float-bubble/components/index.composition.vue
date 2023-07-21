@@ -161,23 +161,27 @@ function adsorbRule({ offsetX }) {
   const value = {
     offset: { ...writeOffset.value },
   }
-  if (offsetX >= parentRect.value.width - floatRect.value.width)
+  if (offsetX >= parentRect.value.width - floatRect.value.width) {
     value.type = 'right'
-  else if (offsetX <= 0)
+  }
+  else if (offsetX <= 0) {
     value.type = 'left'
-  else
+  }
+  else {
     value.type = 'none'
-
+  }
   return value
 }
 
 function magnetRule({ offsetX }) {
   let magnetX = 0
 
-  if (offsetX > parentRect.value.width / 2 - halfRect.value.width)
+  if (offsetX > parentRect.value.width / 2 - halfRect.value.width) {
     magnetX = parentRect.value.width - floatRect.value.width - gapX.value
-  else
+  }
+  else {
     magnetX = gapX.value
+  }
 
   return {
     x: magnetX,
@@ -189,17 +193,21 @@ function safeRule(value) {
   let safeY = 0
   let safeX = 0
 
-  if (value.offsetY >= halfRect.value.height)
+  if (value.offsetY >= halfRect.value.height) {
     safeY = value.offsetY - halfRect.value.height
+  }
 
-  if (value.offsetX >= halfRect.value.width)
+  if (value.offsetX >= halfRect.value.width) {
     safeX = value.offsetX - halfRect.value.width
+  }
 
-  if (value.offsetY >= parentRect.value.height - halfRect.value.height)
+  if (value.offsetY >= parentRect.value.height - halfRect.value.height) {
     safeY = parentRect.value.height - floatRect.height
+  }
 
-  if (value.offsetX >= parentRect.value.width - halfRect.value.width)
+  if (value.offsetX >= parentRect.value.width - halfRect.value.width) {
     safeX = parentRect.value.width - floatRect.width
+  }
 
   return {
     x: safeX,
@@ -222,15 +230,17 @@ function onMouseup(event) {
   draggable.value = false
   transition.value = true
 
-  if (!props.magnet)
+  if (!props.magnet) {
     return
+  }
 
   const adsorbValue = adsorbRule({
     offsetX: writeOffset.value.x,
   })
 
-  if (adsorbValue.type !== 'none')
+  if (adsorbValue.type !== 'none') {
     return
+  }
 
   const magnetValue = magnetRule({
     offsetX: writeOffset.value.x,
@@ -245,8 +255,9 @@ let mousemoveTime = 0
 function onMousemove(event) {
   event.preventDefault()
 
-  if (!draggable.value)
+  if (!draggable.value) {
     return
+  }
 
   mousemoveTime = new Date().getTime()
   if (mousemoveTime - mousedownTime < 50) {

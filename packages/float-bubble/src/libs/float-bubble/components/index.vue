@@ -82,9 +82,9 @@ export default {
       }
     },
     transitionStyle() {
-      if (!this.transition)
+      if (!this.transition) {
         return ''
-
+      }
       return {
         'transition-property': 'all',
         'transition-duration': '300ms',
@@ -159,23 +159,27 @@ export default {
       const value = {
         offset: { ...this.writeOffset },
       }
-      if (offsetX >= this.parentRect.width - this.floatRect.width)
+      if (offsetX >= this.parentRect.width - this.floatRect.width) {
         value.type = 'right'
-      else if (offsetX <= 0)
+      }
+      else if (offsetX <= 0) {
         value.type = 'left'
-      else
+      }
+      else {
         value.type = 'none'
-
+      }
       return value
     },
     magnetRule({ offsetX, offsetY }) {
       const y = 0
       let x = 0
 
-      if (offsetX > this.parentRect.width / 2 - this.halfRect.width)
+      if (offsetX > this.parentRect.width / 2 - this.halfRect.width) {
         x = this.parentRect.width - this.floatRect.width - this.gapX
-      else
+      }
+      else {
         x = this.gapX
+      }
 
       return {
         x,
@@ -186,17 +190,21 @@ export default {
       let y = 0
       let x = 0
 
-      if (offsetY >= this.halfRect.height)
+      if (offsetY >= this.halfRect.height) {
         y = offsetY - this.halfRect.height
+      }
 
-      if (offsetX >= this.halfRect.width)
+      if (offsetX >= this.halfRect.width) {
         x = offsetX - this.halfRect.width
+      }
 
-      if (offsetY >= this.parentRect.height - this.halfRect.height)
+      if (offsetY >= this.parentRect.height - this.halfRect.height) {
         y = this.parentRect.height - this.floatRect.height
+      }
 
-      if (offsetX >= this.parentRect.width - this.halfRect.width)
+      if (offsetX >= this.parentRect.width - this.halfRect.width) {
         x = this.parentRect.width - this.floatRect.width
+      }
 
       return {
         x,
@@ -266,16 +274,18 @@ export default {
       //   return
       // }
 
-      if (!this.magnet)
+      if (!this.magnet) {
         return
+      }
 
       const adsorb = this.adsorbRule({
         offsetX: this.writeOffset.x,
         offsetY: this.writeOffset.y,
       })
 
-      if (adsorb.type !== 'none')
+      if (adsorb.type !== 'none') {
         return
+      }
 
       const value = this.magnetRule({
         offsetX: this.writeOffset.x,
@@ -287,8 +297,9 @@ export default {
       }
     },
     onMousemove(event) {
-      if (!this.draggable)
+      if (!this.draggable) {
         return
+      }
 
       this.mousemoveTime = new Date().getTime()
       if (this.mousemoveTime - this.mousedownTime < 50) {
