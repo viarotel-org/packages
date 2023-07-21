@@ -2,6 +2,8 @@
   "name": "packages",
   "description": "viarotel's packages",
   "scripts": {
+    "lint": "pnpm lint:js",
+    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix",
     "clean": "lerna clean",
     "build": "lerna run build",
     "release": "lerna publish"
@@ -18,15 +20,6 @@
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
     "unocss": "^0.53.5",
-    "vue-eslint-parser": "^9.3.1",
-    "vue2": "npm:vue@^2.6",
-    "vue2.7": "npm:vue@^2.7",
-    "vue3": "npm:vue@^3"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "vue-template-compiler@2.7.14": "patches/vue-template-compiler@2.7.14.patch",
-      "@vitejs/plugin-vue2@2.2.0": "patches/@vitejs__plugin-vue2@2.2.0.patch"
-    }
+    "vue-eslint-parser": "^9.3.1"
   }
 }

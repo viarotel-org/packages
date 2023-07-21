@@ -1,14 +1,3 @@
-<script setup>
-const magneted = true
-
-const onAdsorb = (event) => {
-  console.log('onAdsorb.event', event)
-}
-const onUnadsorb = (event) => {
-  console.log('onUnadsorb.event', event)
-}
-</script>
-
 <template>
   <div class="h-full relative float-bubble-container">
     <float-bubble
@@ -24,5 +13,23 @@ const onUnadsorb = (event) => {
     ></float-bubble>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      magneted: false,
+    }
+  },
+  methods: {
+    onAdsorb(event) {
+      console.log('onAdsorb.event', event)
+    },
+    onUnadsorb(event) {
+      console.log('onUnadsorb.event', event)
+    },
+  },
+}
+</script>
 
 <style scoped></style>

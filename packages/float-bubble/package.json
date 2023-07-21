@@ -40,33 +40,31 @@
   },
   "scripts": {
     "dev": "pnpm dev:3",
-    "dev:3": "pnpm switch:3 && vite",
-    "dev:2.7": "pnpm switch:2.7 && vite",
-    "dev:2": "pnpm switch:2 && vite",
-    "build": "pnpm build:3 && pnpm build:2.7 && pnpm build:2",
-    "build:3": "pnpm switch:3 && vite build",
-    "build:2.7": "pnpm switch:2.7 && vite build",
-    "build:2": "pnpm switch:2 && vite build",
-    "switch:3": "vue-demi-switch 3 vue3",
-    "switch:2.7": "vue-demi-switch 2 vue2.7",
-    "switch:2": "vue-demi-switch 2 vue2",
-    "preview": "vite preview",
-    "lint": "pnpm run lint:js",
-    "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .eslintignore --fix"
+    "dev:3": "pnpm switch:3 && vite --mode vue3",
+    "dev:2s": "pnpm switch:2s && vite --mode vue2s",
+    "dev:2": "pnpm switch:2 && vite --mode vue2",
+    "build": "pnpm build:3 && pnpm build:2s && pnpm build:2",
+    "build:3": "pnpm switch:3 && vite build --mode vue3",
+    "build:2s": "pnpm switch:2s && vite build --mode vue2s",
+    "build:2": "pnpm switch:2 && vite build --mode vue2",
+    "switch:3": "vue-demi-switch 3",
+    "switch:2s": "vue-demi-switch 2.7",
+    "switch:2": "vue-demi-switch 2",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.7.1",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
   },
   "devDependencies": {
-    "@viarotel-org/vite-plugin-vue": "workspace:^",
+    "@viarotel-org/vite-config-vue": "workspace:^",
+    "@viarotel-org/vite-config-vue3": "workspace:^",
+    "@vue/composition-api": "^1.7.1",
+    "cross-env": "^7.0.3",
     "vite": "^4.4.0",
-    "vite-plugin-eslint": "^1.8.1",
-    "vue-template-compiler": "^2.7.14"
+    "vite-plugin-eslint": "^1.8.1"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.7.1",
     "vue": "^2.0.0 || ^3.0.0"
   },
   "peerDependenciesMeta": {

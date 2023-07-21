@@ -1,0 +1,33 @@
+{
+  "name": "@viarotel-org/vite-config-vue3",
+  "version": "0.1.6",
+  "description": "viarotel's package",
+  "keywords": [],
+  "author": "viarotel <viarotel@qq.com>",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue3#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.0",
+    "vue": "^3.3.4"
+  }
+}

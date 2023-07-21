@@ -27,6 +27,9 @@
       "changelogPreset": "angular",
       "conventionalCommits": true,
       "changelog": true
+    },
+    "clean": {
+      "yes": true
     }
   }
 }

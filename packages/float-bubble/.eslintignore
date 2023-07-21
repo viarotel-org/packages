@@ -1,6 +1,0 @@
-# user
-node_modules/*
-/public/*
-/dist/*
-/src/shime-uni.d.ts
-/src/uni_modules/*

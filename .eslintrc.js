@@ -63,16 +63,6 @@ module.exports = {
     'global-require': 'off',
     'no-underscore-dangle': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    // 'import/extensions': [
-    //   'error',
-    //   'always',
-    //   {
-    //     ignorePackages: true,
-    //     pattern: {
-    //       js: 'ignorePackages',
-    //     },
-    //   },
-    // ],
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
     'import/no-absolute-path': 'off',
