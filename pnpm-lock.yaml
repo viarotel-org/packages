@@ -19,6 +19,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^0.39.8
         version: registry.npmmirror.com/@antfu/eslint-config@0.39.8(eslint@8.45.0)(typescript@5.1.6)
+      '@nx/nx-win32-x64-msvc':
+        specifier: ^16.5.4
+        version: registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.4
       '@unocss/reset':
         specifier: ^0.53.5
         version: registry.npmmirror.com/@unocss/reset@0.53.5
@@ -1392,6 +1395,94 @@ packages:
       semver: registry.npmmirror.com/semver@7.5.3
       tmp: registry.npmmirror.com/tmp@0.2.1
       tslib: registry.npmmirror.com/tslib@2.6.0
+    dev: true
+
+  registry.npmmirror.com/@nx/nx-darwin-arm64@16.5.4:
+    resolution: {integrity: sha512-thBScKzBxzz835Ro755uZZc7e5umuT57ftaBNV5+U0UdF5Glxncd5fUB/PijZr5AFLpHyqL4Azv8cvw0C8hHlg==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-darwin-arm64/-/nx-darwin-arm64-16.5.4.tgz}
+    name: '@nx/nx-darwin-arm64'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-darwin-x64@16.5.4:
+    resolution: {integrity: sha512-QsGjslNKcB6eg4BycmyFhdlXU/SWTVAH3jgvz0kbHdb2o+Y7ZtWS1vY1L4CgD3Or9El7OJ03de9eJM+yJwykUA==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-darwin-x64/-/nx-darwin-x64-16.5.4.tgz}
+    name: '@nx/nx-darwin-x64'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-freebsd-x64@16.5.4:
+    resolution: {integrity: sha512-AmP7SM2Zp1Nllk5xcpzqo6L8bfa5Skjsma9aP4QOPMbLuKTBusBhYbT58DDWhrIM32NX9bn96Xbcu+Y5QVatGg==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-freebsd-x64/-/nx-freebsd-x64-16.5.4.tgz}
+    name: '@nx/nx-freebsd-x64'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-linux-arm-gnueabihf@16.5.4:
+    resolution: {integrity: sha512-BJvw8fWaxZqJvx5w+2DhLOE9TvRZCd7B/1B/2AGxQY44m3sIDFAVB2OM0/FpZFlNvy2EgBmczdhyDTjQtzmosw==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-16.5.4.tgz}
+    name: '@nx/nx-linux-arm-gnueabihf'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-linux-arm64-gnu@16.5.4:
+    resolution: {integrity: sha512-1udTO0JSUxFzAkDRwv5yYpry2Joeh0z1HlfwoL94EIHOQ/CK5NGUAt3uO5XEklz2KAL0rHvBdLpGtjxc1z2x7g==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-16.5.4.tgz}
+    name: '@nx/nx-linux-arm64-gnu'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-linux-arm64-musl@16.5.4:
+    resolution: {integrity: sha512-0+K9Eo8/SA3PjrcXmSI2QfrJH2hI/y+gLBBbiq42BbR//JPH1fBjmY7eVTPawoRvnF4Roqwq3wsqPmPpN/cLBw==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-16.5.4.tgz}
+    name: '@nx/nx-linux-arm64-musl'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-linux-x64-gnu@16.5.4:
+    resolution: {integrity: sha512-Dep0fDFapz4rpuQZgCLLLljdzhrt8Epb84QFWveczXLoKcs5twVeBT0vHcXnyJ+s4ujURz0/VMwzZ6Vmn5Mewg==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-16.5.4.tgz}
+    name: '@nx/nx-linux-x64-gnu'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-linux-x64-musl@16.5.4:
+    resolution: {integrity: sha512-UN7gu4Vlxab+8Kk6vJBk9x2IrH8ola2a1kacOe/SNUD44HJQP/hDPCBIDp5YffWahaMUM9fJuAuYMtPf5HFmkA==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-16.5.4.tgz}
+    name: '@nx/nx-linux-x64-musl'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-win32-arm64-msvc@16.5.4:
+    resolution: {integrity: sha512-+A1rDNMr3RQRTO1YoaP4NRrrkiQwNrS2Zqn3+ITDDZZeXrMQl9YWZlEXs7Ct91FcF6PBBKs6YZKe+IO7VSmowA==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-16.5.4.tgz}
+    name: '@nx/nx-win32-arm64-msvc'
+    version: 16.5.4
+    engines: {node: '>= 10'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.4:
+    resolution: {integrity: sha512-E6iDpyA92nItpusq0o+wafhsRMT6Z+S2pcrUQEdh6JRKeyegcKMSdCPAZ+Nf76aOOQmUs0eXblxdVnpTAZVHLw==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-16.5.4.tgz}
+    name: '@nx/nx-win32-x64-msvc'
+    version: 16.5.4
+    engines: {node: '>= 10'}
     dev: true
 
   registry.npmmirror.com/@octokit/auth-token@3.0.4:
@@ -7024,7 +7115,7 @@ packages:
       array-differ: registry.npmmirror.com/array-differ@3.0.0
       array-union: registry.npmmirror.com/array-union@2.1.0
       arrify: registry.npmmirror.com/arrify@2.0.1
-      minimatch: registry.npmmirror.com/minimatch@3.0.5
+      minimatch: registry.npmmirror.com/minimatch@3.1.2
     dev: true
 
   registry.npmmirror.com/mute-stream@0.0.8:
@@ -7376,6 +7467,17 @@ packages:
       v8-compile-cache: registry.npmmirror.com/v8-compile-cache@2.3.0
       yargs: registry.npmmirror.com/yargs@17.7.2
       yargs-parser: registry.npmmirror.com/yargs-parser@21.1.1
+    optionalDependencies:
+      '@nx/nx-darwin-arm64': registry.npmmirror.com/@nx/nx-darwin-arm64@16.5.4
+      '@nx/nx-darwin-x64': registry.npmmirror.com/@nx/nx-darwin-x64@16.5.4
+      '@nx/nx-freebsd-x64': registry.npmmirror.com/@nx/nx-freebsd-x64@16.5.4
+      '@nx/nx-linux-arm-gnueabihf': registry.npmmirror.com/@nx/nx-linux-arm-gnueabihf@16.5.4
+      '@nx/nx-linux-arm64-gnu': registry.npmmirror.com/@nx/nx-linux-arm64-gnu@16.5.4
+      '@nx/nx-linux-arm64-musl': registry.npmmirror.com/@nx/nx-linux-arm64-musl@16.5.4
+      '@nx/nx-linux-x64-gnu': registry.npmmirror.com/@nx/nx-linux-x64-gnu@16.5.4
+      '@nx/nx-linux-x64-musl': registry.npmmirror.com/@nx/nx-linux-x64-musl@16.5.4
+      '@nx/nx-win32-arm64-msvc': registry.npmmirror.com/@nx/nx-win32-arm64-msvc@16.5.4
+      '@nx/nx-win32-x64-msvc': registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.4
     transitivePeerDependencies:
       - debug
     dev: true

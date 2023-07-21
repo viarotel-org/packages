@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
+    "@nx/nx-win32-x64-msvc": "^16.5.4",
     "@unocss/reset": "^0.53.5",
     "@unocss/transformer-directives": "^0.53.5",
     "eslint": "^8.45.0",
