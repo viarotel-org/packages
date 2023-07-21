@@ -1,5 +1,5 @@
 import { camelCase, kebabCase } from 'lodash-es'
-import { ref, computed, unref } from 'vue-demi'
+// import { ref, computed, unref } from 'vue-demi'
 
 /**
  * 根据传入的props创建局部可写的参数
@@ -29,24 +29,24 @@ export const createWriteProps = (
   }, {}),
 })
 
-export const createComposeWriteProps = (
-  propName,
-  {
-    props, emit, setCallback = null, emitUpdate = true,
-  } = {},
-) => {
-  console.log('props[propName]', props[propName])
-  const tempProp = ref(null)
-  const writeProp = computed({
-    get() {
-      return tempProp.value || unref(props[propName])
-    },
-    set(value) {
-      if (setCallback) setCallback(value)
-      if (emitUpdate) emit(`update:${kebabCase(propName)}`, value)
-      tempProp.value = value
-    },
-  })
+// export const createComposeWriteProps = (
+//   propName,
+//   {
+//     props, emit, setCallback = null, emitUpdate = true,
+//   } = {},
+// ) => {
+//   console.log('props[propName]', props[propName])
+//   const tempProp = ref(null)
+//   const writeProp = computed({
+//     get() {
+//       return tempProp.value || unref(props[propName])
+//     },
+//     set(value) {
+//       if (setCallback) setCallback(value)
+//       if (emitUpdate) emit(`update:${kebabCase(propName)}`, value)
+//       tempProp.value = value
+//     },
+//   })
 
-  return writeProp
-}
+//   return writeProp
+// }

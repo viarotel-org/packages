@@ -15,10 +15,13 @@
     },
     "./style": "./dist/vue3/style.css",
     "./vue3": "./dist/vue3/float-bubble.js",
+    "./vue2s": "./dist/vue2s/float-bubble.js",
     "./vue2": "./dist/vue2/float-bubble.js",
     "./core": "./src/libs/float-bubble/index.js",
     "./vue2/common": "./dist/vue2/float-bubble.cjs",
     "./vue2/browser": "./dist/vue2/float-bubble.umd.cjs",
+    "./vue2s/common": "./dist/vue2s/float-bubble.cjs",
+    "./vue2s/browser": "./dist/vue2s/float-bubble.umd.cjs",
     "./vue3/common": "./dist/vue3/float-bubble.cjs",
     "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs"
   },
@@ -47,9 +50,9 @@
     "build:3": "pnpm switch:3 && vite build --mode vue3",
     "build:2s": "pnpm switch:2s && vite build --mode vue2s",
     "build:2": "pnpm switch:2 && vite build --mode vue2",
-    "switch:3": "vue-demi-switch 3",
-    "switch:2s": "vue-demi-switch 2.7",
-    "switch:2": "vue-demi-switch 2",
+    "switch:3": "vue-demi-switch 3 vue3",
+    "switch:2s": "vue-demi-switch 2.7 vue2s",
+    "switch:2": "vue-demi-switch 2 vue2",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -58,18 +61,14 @@
   },
   "devDependencies": {
     "@viarotel-org/vite-config-vue": "workspace:^",
-    "@viarotel-org/vite-config-vue3": "workspace:^",
-    "@vue/composition-api": "^1.7.1",
     "cross-env": "^7.0.3",
     "vite": "^4.4.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vue2": "npm:vue@~2.6.14",
+    "vue2s": "npm:vue@^2.7.14",
+    "vue3": "npm:vue@^3.3.4"
   },
   "peerDependencies": {
-    "vue": "^2.0.0 || ^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
+    "vue": "^2.6.14 || ^3.3.4"
   }
 }

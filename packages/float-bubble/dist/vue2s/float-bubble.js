@@ -1,5 +1,4 @@
 import { install } from "vue-demi";
-import { openBlock, createElementBlock, normalizeStyle, withModifiers, renderSlot, createElementVNode, normalizeClass, toDisplayString, createTextVNode } from "vue";
 const __uno = "";
 var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
 const freeGlobal$1 = freeGlobal;
@@ -545,13 +544,62 @@ const createWriteProps = (propNames, { prefix = "write", emitUpdate = true, setC
   }, {})
 });
 const index_vue_vue_type_style_index_0_lang = "";
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
+function normalizeComponent(scriptExports, render2, staticRenderFns, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
+  var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
+  if (render2) {
+    options.render = render2;
+    options.staticRenderFns = staticRenderFns;
+    options._compiled = true;
   }
-  return target;
-};
+  if (functionalTemplate) {
+    options.functional = true;
+  }
+  if (scopeId) {
+    options._scopeId = "data-v-" + scopeId;
+  }
+  var hook;
+  if (moduleIdentifier) {
+    hook = function(context) {
+      context = context || // cached call
+      this.$vnode && this.$vnode.ssrContext || // stateful
+      this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext;
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== "undefined") {
+        context = __VUE_SSR_CONTEXT__;
+      }
+      if (injectStyles) {
+        injectStyles.call(this, context);
+      }
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier);
+      }
+    };
+    options._ssrRegister = hook;
+  } else if (injectStyles) {
+    hook = shadowMode ? function() {
+      injectStyles.call(
+        this,
+        (options.functional ? this.parent : this).$root.$options.shadowRoot
+      );
+    } : injectStyles;
+  }
+  if (hook) {
+    if (options.functional) {
+      options._injectStyles = hook;
+      var originalRender = options.render;
+      options.render = function renderWithStyleInjection(h, context) {
+        hook.call(context);
+        return originalRender(h, context);
+      };
+    } else {
+      var existing = options.beforeCreate;
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+    }
+  }
+  return {
+    exports: scriptExports,
+    options
+  };
+}
 const writeProps = createWriteProps(["offset"]);
 const _sfc_main = {
   props: {
@@ -818,41 +866,30 @@ const _sfc_main = {
     }
   }
 };
-const _hoisted_1 = { key: 0 };
-const _hoisted_2 = ["src"];
-const _hoisted_3 = {
-  key: 2,
-  class: "text-center"
+var _sfc_render = function render() {
+  var _vm = this, _c = _vm._self._c;
+  return _c("div", { ref: "floatBubble", staticClass: "float-bubble", style: [_vm.offsetStyle, _vm.transitionStyle], on: { "mousedown": function($event) {
+    $event.preventDefault();
+    return _vm.onMousedown.apply(null, arguments);
+  }, "mouseup": function($event) {
+    $event.preventDefault();
+    return _vm.onMouseup.apply(null, arguments);
+  } } }, [_vm._t("default", function() {
+    return [_c("div", { staticClass: "float-bubble-default", class: [_vm.bubbleClass], style: [_vm.sizeStyle] }, [_vm.text ? _c("span", [_vm._v(_vm._s(_vm.text))]) : _vm.image ? _c("img", { staticClass: "w-2/3", attrs: { "src": _vm.image, "alt": "" } }) : _c("span", { staticClass: "text-center" }, [_vm._v(" " + _vm._s(_vm.writeOffset.x) + " "), _c("br"), _vm._v(" " + _vm._s(_vm.writeOffset.y) + " ")])])];
+  })], 2);
 };
-const _hoisted_4 = /* @__PURE__ */ createElementVNode("br", null, null, -1);
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", {
-    ref: "floatBubble",
-    class: "float-bubble",
-    style: normalizeStyle([$options.offsetStyle, $options.transitionStyle]),
-    onMousedown: _cache[0] || (_cache[0] = withModifiers((...args) => $options.onMousedown && $options.onMousedown(...args), ["prevent"])),
-    onMouseup: _cache[1] || (_cache[1] = withModifiers((...args) => $options.onMouseup && $options.onMouseup(...args), ["prevent"]))
-  }, [
-    renderSlot(_ctx.$slots, "default", {}, () => [
-      createElementVNode("div", {
-        class: normalizeClass(["float-bubble-default", [$props.bubbleClass]]),
-        style: normalizeStyle([$options.sizeStyle])
-      }, [
-        $props.text ? (openBlock(), createElementBlock("span", _hoisted_1, toDisplayString($props.text), 1)) : $props.image ? (openBlock(), createElementBlock("img", {
-          key: 1,
-          src: $props.image,
-          alt: "",
-          class: "w-2/3"
-        }, null, 8, _hoisted_2)) : (openBlock(), createElementBlock("span", _hoisted_3, [
-          createTextVNode(toDisplayString(_ctx.writeOffset.x) + " ", 1),
-          _hoisted_4,
-          createTextVNode(" " + toDisplayString(_ctx.writeOffset.y), 1)
-        ]))
-      ], 6)
-    ])
-  ], 36);
-}
-const FloatBubble = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+var _sfc_staticRenderFns = [];
+var __component__ = /* @__PURE__ */ normalizeComponent(
+  _sfc_main,
+  _sfc_render,
+  _sfc_staticRenderFns,
+  false,
+  null,
+  null,
+  null,
+  null
+);
+const FloatBubble = __component__.exports;
 FloatBubble.install = (app) => {
   app.component("FloatBubble", FloatBubble);
 };

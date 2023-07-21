@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      magneted: false,
+      magneted: true,
     }
   },
   methods: {

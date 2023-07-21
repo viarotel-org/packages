@@ -600,7 +600,7 @@ const _sfc_main = {
       default: ""
     }
   },
-  emits: ["unadsorb", "adsorb"],
+  emits: ["unadsorb", "adsorb", "update:offset"],
   data() {
     return {
       ...writeProps.data,
@@ -802,7 +802,6 @@ const _sfc_main = {
       };
     },
     onMousemove(event) {
-      event.preventDefault();
       if (!this.draggable) {
         return;
       }
@@ -816,7 +815,6 @@ const _sfc_main = {
       this.setOffset({ x, y });
     },
     onMouseleave(event) {
-      event.preventDefault();
       this.draggable = false;
       this.onMouseup();
     }

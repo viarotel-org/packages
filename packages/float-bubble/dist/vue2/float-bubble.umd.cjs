@@ -546,12 +546,47 @@
       return obj;
     }, {})
   });
+  var render = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", {
+      ref: "floatBubble",
+      staticClass: "float-bubble",
+      style: [_vm.offsetStyle, _vm.transitionStyle],
+      on: {
+        "mousedown": function($event) {
+          $event.preventDefault();
+          return _vm.onMousedown.apply(null, arguments);
+        },
+        "mouseup": function($event) {
+          $event.preventDefault();
+          return _vm.onMouseup.apply(null, arguments);
+        }
+      }
+    }, [_vm._t("default", function() {
+      return [_c("div", {
+        staticClass: "float-bubble-default",
+        class: [_vm.bubbleClass],
+        style: [_vm.sizeStyle]
+      }, [_vm.text ? _c("span", [_vm._v(_vm._s(_vm.text))]) : _vm.image ? _c("img", {
+        staticClass: "w-2/3",
+        attrs: {
+          "src": _vm.image,
+          "alt": ""
+        }
+      }) : _c("span", {
+        staticClass: "text-center"
+      }, [_vm._v(" " + _vm._s(_vm.writeOffset.x) + " "), _c("br"), _vm._v(" " + _vm._s(_vm.writeOffset.y) + " ")])])];
+    })], 2);
+  };
+  var staticRenderFns = [];
   const index_vue_vue_type_style_index_0_lang = "";
-  function normalizeComponent(scriptExports, render, staticRenderFns, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
+  function normalizeComponent(scriptExports, render2, staticRenderFns2, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
     var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
-    if (render) {
-      options.render = render;
-      options.staticRenderFns = staticRenderFns;
+    if (render2) {
+      options.render = render2;
+      options.staticRenderFns = staticRenderFns2;
       options._compiled = true;
     }
     if (functionalTemplate) {
@@ -604,7 +639,7 @@
     };
   }
   const writeProps = createWriteProps(["offset"]);
-  const _sfc_main = {
+  const __vue2_script = {
     props: {
       offset: {
         type: Object,
@@ -649,7 +684,7 @@
         default: ""
       }
     },
-    emits: ["unadsorb", "adsorb"],
+    emits: ["unadsorb", "adsorb", "update:offset"],
     data() {
       return {
         ...writeProps.data,
@@ -851,7 +886,6 @@
         };
       },
       onMousemove(event) {
-        event.preventDefault();
         if (!this.draggable) {
           return;
         }
@@ -865,36 +899,30 @@
         this.setOffset({ x, y });
       },
       onMouseleave(event) {
-        event.preventDefault();
         this.draggable = false;
         this.onMouseup();
       }
     }
   };
-  var _sfc_render = function render() {
-    var _vm = this, _c = _vm._self._c;
-    return _c("div", { ref: "floatBubble", staticClass: "float-bubble", style: [_vm.offsetStyle, _vm.transitionStyle], on: { "mousedown": function($event) {
-      $event.preventDefault();
-      return _vm.onMousedown.apply(null, arguments);
-    }, "mouseup": function($event) {
-      $event.preventDefault();
-      return _vm.onMouseup.apply(null, arguments);
-    } } }, [_vm._t("default", function() {
-      return [_c("div", { staticClass: "float-bubble-default", class: [_vm.bubbleClass], style: [_vm.sizeStyle] }, [_vm.text ? _c("span", [_vm._v(_vm._s(_vm.text))]) : _vm.image ? _c("img", { staticClass: "w-2/3", attrs: { "src": _vm.image, "alt": "" } }) : _c("span", { staticClass: "text-center" }, [_vm._v(" " + _vm._s(_vm.writeOffset.x) + " "), _c("br"), _vm._v(" " + _vm._s(_vm.writeOffset.y) + " ")])])];
-    })], 2);
-  };
-  var _sfc_staticRenderFns = [];
+  const __cssModules = {};
   var __component__ = /* @__PURE__ */ normalizeComponent(
-    _sfc_main,
-    _sfc_render,
-    _sfc_staticRenderFns,
+    __vue2_script,
+    render,
+    staticRenderFns,
     false,
-    null,
+    __vue2_injectStyles,
     null,
     null,
     null
   );
-  const FloatBubble = __component__.exports;
+  function __vue2_injectStyles(context) {
+    for (let o in __cssModules) {
+      this[o] = __cssModules[o];
+    }
+  }
+  const FloatBubble = /* @__PURE__ */ function() {
+    return __component__.exports;
+  }();
   FloatBubble.install = (app) => {
     app.component("FloatBubble", FloatBubble);
   };

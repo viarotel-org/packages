@@ -82,7 +82,7 @@ export default {
       default: '',
     },
   },
-  emits: ['unadsorb', 'adsorb'],
+  emits: ['unadsorb', 'adsorb', 'update:offset'],
   data() {
     return {
       ...writeProps.data,

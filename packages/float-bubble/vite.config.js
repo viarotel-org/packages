@@ -1,18 +1,17 @@
-import { loadEnv } from 'vite'
+import { loadEnv, defineConfig } from 'vite'
 import { resolve } from 'path'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
-import viteConfig from '@viarotel-org/vite-config-vue'
+import resolveConfig from '@viarotel-org/vite-config-vue'
 import postcssConfig from './postcss.config.js'
 
-// console.log(process.env.VUE_VERSION)
-
-export default viteConfig('2.7.0', ({ mode }) => {
+// @ts-ignore
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
   const version = env.VITE_VUE_VERSION
   console.log('version', version)
 
-  return {
+  return resolveConfig(version, {
     plugins: [useEslint(), useUnoCSS()],
     resolve: {
       alias: {
@@ -26,11 +25,11 @@ export default viteConfig('2.7.0', ({ mode }) => {
       exclude: ['vue-demi'],
     },
     build: {
-      outDir: 'dist',
+      outDir: `dist/${mode}`,
       lib: {
         entry: resolve(__dirname, 'src/libs/index.js'),
         name: 'FloatBubble',
-        fileName: `float-bubble.vue@${version}`,
+        fileName: `float-bubble`,
         formats: ['es', 'cjs', 'umd'],
       },
       rollupOptions: {
@@ -45,5 +44,5 @@ export default viteConfig('2.7.0', ({ mode }) => {
     define: {
       ...env,
     },
-  }
+  })
 })

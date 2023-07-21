@@ -1,8 +1,11 @@
-import { createApp } from 'vue-demi'
+import { createApp, version } from 'vue-demi'
+
 import App from './App.vue'
 import libs from './libs/index'
 
 import './styles/index'
+
+console.log(`vue@${version}`)
 
 const app = createApp(App)
 
