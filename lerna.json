@@ -4,7 +4,6 @@
   "npmClient": "pnpm",
   "command": {
     "create": {
-      "bin": "",
       "homepage": "https://github.com/viarotel-org/packages#readme",
       "registry": "https://registry.npmjs.org/",
       "description": "viarotel's package",
