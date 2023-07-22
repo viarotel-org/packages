@@ -16,9 +16,6 @@ export default defineConfig(
     css: {
       postcss: postcssConfig,
     },
-    optimizeDeps: {
-      exclude: ["vue-demi"],
-    },
     build: {
       outDir: "dist",
       minify: false,
