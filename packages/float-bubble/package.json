@@ -29,13 +29,13 @@
     "./vue2s/browser": "./dist/vue2s/float-bubble.umd.cjs",
     "./vue3/common": "./dist/vue3/float-bubble.cjs",
     "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs",
-    "./*": "./src/**"
+    "./*": "./*"
   },
   "main": "./dist/vue3/float-bubble.cjs",
   "module": "./dist/vue3/float-bubble.js",
   "files": [
-    "./dist/*",
-    "./src/*"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

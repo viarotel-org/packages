@@ -16,26 +16,30 @@
   "keywords": [],
   "exports": {
     ".": {
-      "require": "./src/index.js",
-      "import": "./src/index.js"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
-    "./*": "./src/**"
+    "./*": "./*"
   },
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "directories": {
-    "lib": "src"
+    "lib": "dist"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "unbuild"
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.1"
   },
   "devDependencies": {
+    "unbuild": "latest",
     "vite": "^4.4.0",
     "vite-plugin-vue2": "^2.0.3",
     "vue-template-compiler": "~2.6.14",

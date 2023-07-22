@@ -1,18 +1,19 @@
-import { defineConfig, mergeConfigs } from "unocss"
+import { mergeConfigs } from "unocss"
 import { presetApplet, presetRemRpx, transformerApplet } from "unocss-applet"
 
-import { presetConfig as baseConfig } from "../base/index.js"
+import baseConfig from "../base/index.js"
 
-const isApplet = process.env?.UNI_PLATFORM?.startsWith("mp-") || false
+function presetConfig(...configs) {
+  const isApplet = process.env?.UNI_PLATFORM?.startsWith("mp-") || false
+  const appletPreset = presetApplet({ enable: isApplet })
+  return mergeConfigs([
+    baseConfig(),
+    {
+      presets: [appletPreset, presetRemRpx({ enable: isApplet })],
+      transformers: [transformerApplet({ enable: isApplet })],
+    },
+    ...configs,
+  ])
+}
 
-const appletPreset = presetApplet({ enable: isApplet })
-
-const presetConfig = mergeConfigs([
-  baseConfig,
-  {
-    presets: [appletPreset, presetRemRpx({ enable: isApplet })],
-    transformers: [transformerApplet({ enable: isApplet })],
-  },
-])
-
-export default defineConfig(presetConfig)
+export default presetConfig

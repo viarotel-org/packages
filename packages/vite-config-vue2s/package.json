@@ -16,26 +16,30 @@
   "keywords": [],
   "exports": {
     ".": {
-      "require": "./src/index.js",
-      "import": "./src/index.js"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
-    "./*": "./src/**"
+    "./*": "./*"
   },
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "directories": {
-    "lib": "src"
+    "lib": "dist"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "unbuild"
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.2.0",
     "@vitejs/plugin-vue2-jsx": "^1.1.0",
     "@vue/compiler-sfc": "^2.7.14",
+    "unbuild": "latest",
     "vite": "^4.4.0",
     "vue2s": "npm:vue@^2.7.14"
   }

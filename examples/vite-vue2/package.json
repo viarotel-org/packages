@@ -28,6 +28,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
+    "@viarotel-org/unocss-config": "workspace:^",
     "@viarotel-org/vite-config-vue": "workspace:^",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",

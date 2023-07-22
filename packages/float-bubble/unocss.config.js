@@ -1,4 +1,8 @@
 import { defineConfig } from "unocss"
-import presetConfig from "@viarotel-org/unocss-config"
+import unocssConfig from "@viarotel-org/unocss-config/dist/index.cjs"
 
-export default defineConfig(presetConfig)
+export default defineConfig(
+  unocssConfig({
+    shortcuts: {},
+  }),
+)

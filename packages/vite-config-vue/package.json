@@ -16,29 +16,37 @@
   "keywords": [],
   "exports": {
     ".": {
-      "require": "./src/index.js",
-      "import": "./src/index.js"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
-    "./vue3": "./src/vue3/index.js",
-    "./vue2s": "./src/vue2s/index.js",
-    "./vue2": "./src/vue2/index.js",
-    "./*": "./src/**"
+    "./vue3": "./dist/vue3.mjs",
+    "./vue2s": "./dist/vue2s.mjs",
+    "./vue2": "./dist/vue2.mjs",
+    "./vue3/common": "./dist/vue3.cjs",
+    "./vue2s/common": "./dist/vue2s.cjs",
+    "./vue2/common": "./dist/vue2.cjs",
+    "./*": "./*"
   },
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "directories": {
-    "lib": "src"
+    "lib": "dist"
   },
   "files": [
+    "dist",
     "src"
   ],
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "unbuild"
+  },
   "devDependencies": {
     "@viarotel-org/vite-config-vue2": "workspace:^",
     "@viarotel-org/vite-config-vue2s": "workspace:^",
     "@viarotel-org/vite-config-vue3": "workspace:^",
+    "unbuild": "latest",
     "vite": "^4.4.5"
   }
 }
