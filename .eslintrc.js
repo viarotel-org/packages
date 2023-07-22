@@ -6,7 +6,7 @@ module.exports = {
     "n/prefer-global/process": "off",
     "unused-imports/no-unused-vars": "off",
     "no-console": "off",
-    "semi": ["error", "never"],
+    "semi": "error",
     // ts
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/quotes": "off",

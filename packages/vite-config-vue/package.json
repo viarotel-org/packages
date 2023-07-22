@@ -21,7 +21,8 @@
     },
     "./vue3": "./src/vue3/index.js",
     "./vue2s": "./src/vue2s/index.js",
-    "./vue2": "./src/vue2/index.js"
+    "./vue2": "./src/vue2/index.js",
+    "./*": "./src/**"
   },
   "main": "src/index.js",
   "module": "src/index.js",

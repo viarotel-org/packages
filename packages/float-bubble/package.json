@@ -28,7 +28,8 @@
     "./vue2s/common": "./dist/vue2s/float-bubble.cjs",
     "./vue2s/browser": "./dist/vue2s/float-bubble.umd.cjs",
     "./vue3/common": "./dist/vue3/float-bubble.cjs",
-    "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs"
+    "./vue3/browser": "./dist/vue3/float-bubble.umd.cjs",
+    "./*": "./src/**"
   },
   "main": "./dist/vue3/float-bubble.cjs",
   "module": "./dist/vue3/float-bubble.js",
@@ -64,6 +65,7 @@
     "vue-demi": "latest"
   },
   "devDependencies": {
+    "@viarotel-org/unocss-config": "workspace:^",
     "@viarotel-org/vite-config-vue": "workspace:^",
     "cross-env": "^7.0.3",
     "vite": "^4.4.0",

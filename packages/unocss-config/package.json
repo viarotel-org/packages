@@ -18,6 +18,16 @@
     "config",
     "preset"
   ],
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.js"
+    },
+    "./base": "./src/base/index.js",
+    "./applet": "./src/applet/index.js",
+    "./desktop": "./src/desktop/index.js",
+    "./*": "./src/**"
+  },
   "main": "src/index.js",
   "module": "src/index.js",
   "directories": {
@@ -31,6 +41,7 @@
   },
   "devDependencies": {
     "@unocss/transformer-directives": "^0.53.5",
-    "unocss": "^0.53.5"
+    "unocss": "^0.53.5",
+    "unocss-applet": "^0.5.3"
   }
 }

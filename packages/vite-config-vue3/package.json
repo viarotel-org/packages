@@ -14,6 +14,13 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "keywords": [],
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.js"
+    },
+    "./*": "./src/**"
+  },
   "main": "src/index.js",
   "module": "src/index.js",
   "directories": {
