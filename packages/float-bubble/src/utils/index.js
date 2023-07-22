@@ -1,14 +1,15 @@
-import { camelCase, kebabCase } from 'lodash-es'
-
-// import { ref, computed, unref } from 'vue-demi'
+import { camelCase, kebabCase } from "lodash-es"
+import { computed, ref, unref } from "vue-demi"
 
 /**
  * 根据传入的props创建局部可写的参数
  * @param {*} propNames
  * @returns
  */
-export function createWriteProps(propNames,
-  { prefix = 'write', emitUpdate = true, setCallback = null } = {}) {
+export function createWriteProps(
+  propNames,
+  { prefix = "write", emitUpdate = true, setCallback = null } = {},
+) {
   return {
     data: propNames.reduce((obj, name) => {
       obj[camelCase(`temp-${name}`)] = null
@@ -32,24 +33,23 @@ export function createWriteProps(propNames,
   }
 }
 
-// export const createComposeWriteProps = (
-//   propName,
-//   {
-//     props, emit, setCallback = null, emitUpdate = true,
-//   } = {},
-// ) => {
-//   console.log('props[propName]', props[propName])
-//   const tempProp = ref(null)
-//   const writeProp = computed({
-//     get() {
-//       return tempProp.value || unref(props[propName])
-//     },
-//     set(value) {
-//       if (setCallback) setCallback(value)
-//       if (emitUpdate) emit(`update:${kebabCase(propName)}`, value)
-//       tempProp.value = value
-//     },
-//   })
+export function createComposeWriteProps(
+  propName,
+  { props, emit, setCallback = null, emitUpdate = true } = {},
+) {
+  const tempProp = ref(null)
+  const writeProp = computed({
+    get() {
+      return tempProp.value || unref(props[propName])
+    },
+    set(value) {
+      if (setCallback)
+        setCallback(value)
+      if (emitUpdate)
+        emit(`update:${kebabCase(propName)}`, value)
+      tempProp.value = value
+    },
+  })
 
-//   return writeProp
-// }
+  return writeProp
+}

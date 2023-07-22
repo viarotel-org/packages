@@ -8,6 +8,7 @@ export const presetConfig = {
       vueTemplateOptions: {
         compiler,
       },
+      jsx: true,
     }),
   ],
   resolve: {

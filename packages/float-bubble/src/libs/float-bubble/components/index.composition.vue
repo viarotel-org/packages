@@ -150,7 +150,6 @@ function setOffset(value) {
   })
 
   writeOffset.value = { x: value.x, y: value.y }
-  console.log('writeOffset.value', writeOffset.value)
 }
 
 function adsorbUpdate() {

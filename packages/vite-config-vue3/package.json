@@ -27,8 +27,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/compiler-sfc": "^3.3.4",
     "vite": "^4.4.0",
-    "vue": "^3.3.4"
+    "vue3": "npm:vue@^3.3.4"
   }
 }
