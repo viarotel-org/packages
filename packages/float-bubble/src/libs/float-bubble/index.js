@@ -1,4 +1,4 @@
-import FloatBubble from "./components/index.test.vue"
+import FloatBubble from "./components/index.vue"
 
 FloatBubble.install = (app) => {
   app.component("FloatBubble", FloatBubble)
