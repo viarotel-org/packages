@@ -121,6 +121,15 @@ importers:
         specifier: npm:vue@^3.3.4
         version: registry.npmmirror.com/vue@3.3.4
 
+  packages/unocss-config:
+    devDependencies:
+      '@unocss/transformer-directives':
+        specifier: ^0.53.5
+        version: registry.npmmirror.com/@unocss/transformer-directives@0.53.5
+      unocss:
+        specifier: ^0.53.5
+        version: registry.npmmirror.com/unocss@0.53.5(postcss@8.4.27)(vite@4.4.0)
+
   packages/vite-config-vue:
     devDependencies:
       '@viarotel-org/vite-config-vue2':
@@ -1529,6 +1538,7 @@ packages:
     name: '@nx/nx-win32-x64-msvc'
     version: 16.5.4
     engines: {node: '>= 10'}
+    os: [win32]
     dev: true
 
   registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.5:
@@ -5597,7 +5607,7 @@ packages:
       fs.realpath: registry.npmmirror.com/fs.realpath@1.0.0
       inflight: registry.npmmirror.com/inflight@1.0.6
       inherits: registry.npmmirror.com/inherits@2.0.4
-      minimatch: registry.npmmirror.com/minimatch@3.0.5
+      minimatch: registry.npmmirror.com/minimatch@3.1.2
       once: registry.npmmirror.com/once@1.4.0
       path-is-absolute: registry.npmmirror.com/path-is-absolute@1.0.1
     dev: true

@@ -1,0 +1,36 @@
+{
+  "name": "@viarotel-org/unocss-config",
+  "type": "module",
+  "version": "0.2.0",
+  "description": "viarotel's package",
+  "author": "viarotel <viarotel@163.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/unocss-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "keywords": [
+    "unocss",
+    "config",
+    "preset"
+  ],
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@unocss/transformer-directives": "^0.53.5",
+    "unocss": "^0.53.5"
+  }
+}
