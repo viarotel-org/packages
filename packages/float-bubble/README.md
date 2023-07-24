@@ -16,10 +16,10 @@ npm install @viarotel-org/float-bubble
 // vue3
 import FloatBubble from "@viarotel-org/float-bubble"
 
-// vue2.7以上
+// vue2.7 以上
 import FloatBubble from "@viarotel-org/float-bubble/vue2s"
 
-// vue2.6以下
+// vue2.6 以下
 import FloatBubble from "@viarotel-org/float-bubble/vue2"
 
 // vue3
@@ -60,7 +60,7 @@ const defaultProps = {
   position: {
     type: Object,
     default: () => ({
-      bottom: 24,
+      bottom: 24, // "center"
       right: 24,
     }),
   },
