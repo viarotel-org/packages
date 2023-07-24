@@ -40,10 +40,12 @@
   "scripts": {
     "build": "unbuild"
   },
-  "devDependencies": {
+  "dependencies": {
     "@unocss/transformer-directives": "^0.53.5",
-    "unbuild": "latest",
     "unocss": "^0.53.5",
     "unocss-applet": "^0.5.3"
+  },
+  "devDependencies": {
+    "unbuild": "latest"
   }
 }
