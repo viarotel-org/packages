@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/unocss-config",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@163.com>",
   "license": "ISC",
