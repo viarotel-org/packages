@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/float-bubble",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Vue-based Float-Bubble component",
   "author": "viarotel <viarotel@qq.com>",
   "license": "ISC",
