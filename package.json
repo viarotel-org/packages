@@ -9,20 +9,16 @@
     "release": "pnpm build && lerna publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.8",
     "@nx/nx-win32-x64-msvc": "^16.5.4",
     "@unocss/reset": "^0.53.5",
     "@unocss/transformer-directives": "^0.53.5",
+    "@viarotel-org/eslint-config": "workspace:^",
     "eslint": "^8.45.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-vue": "^9.15.1",
     "lerna": "^7.1.4",
     "postcss-nested": "^6.0.1",
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
-    "unocss": "^0.53.5",
-    "vue-eslint-parser": "^9.3.1"
+    "unocss": "^0.53.5"
   },
   "pnpm": {
     "overrides": {

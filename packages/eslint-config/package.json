@@ -1,11 +1,11 @@
 {
-  "name": "@viarotel-org/vite-config-vue3",
+  "name": "@viarotel-org/eslint-config",
   "type": "module",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "viarotel's package",
-  "author": "viarotel <viarotel@qq.com>",
+  "author": "viarotel <viarotel@163.com>",
   "license": "ISC",
-  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue3#readme",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/eslint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
@@ -14,8 +14,7 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "keywords": [
-    "vite",
-    "vue",
+    "eslint",
     "config",
     "preset"
   ],
@@ -42,11 +41,6 @@
     "build": "unbuild"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "@vue/compiler-sfc": "^3.3.4",
-    "unbuild": "latest",
-    "vite": "^4.4.0",
-    "vue3": "npm:vue@^3.3.4"
+    "@antfu/eslint-config": "^0.39.8"
   }
 }

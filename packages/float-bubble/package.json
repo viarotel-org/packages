@@ -13,6 +13,14 @@
   "bugs": {
     "url": "https://github.com/viarotel-org/packages/issues"
   },
+  "keywords": [
+    "vite",
+    "vue",
+    "float",
+    "bubble",
+    "magnetic",
+    "component"
+  ],
   "exports": {
     ".": {
       "require": "./dist/vue3/float-bubble.cjs",
