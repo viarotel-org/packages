@@ -6,7 +6,7 @@
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --ignore-path .eslintignore --fix",
     "clean": "lerna clean",
     "build": "lerna run build",
-    "release": "lerna publish"
+    "release": "pnpm build && lerna publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
