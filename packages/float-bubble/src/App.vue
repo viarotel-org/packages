@@ -1,3 +1,19 @@
+<template>
+  <div class="h-full relative float-bubble-container">
+    <float-bubble
+      ref="floatBubble"
+      parent=".float-bubble-container"
+      :magnet="magneted"
+      :position="{
+        right: 24,
+        bottom: 'center',
+      }"
+      @adsorb="onAdsorb"
+      @unadsorb="onUnadsorb"
+    />
+  </div>
+</template>
+
 <script>
 export default {
   data() {
@@ -15,21 +31,5 @@ export default {
   },
 }
 </script>
-
-<template>
-  <div class="h-full relative float-bubble-container">
-    <float-bubble
-      ref="floatBubble"
-      parent=".float-bubble-container"
-      :magnet="magneted"
-      :position="{
-        right: 24,
-        bottom: 'center',
-      }"
-      @adsorb="onAdsorb"
-      @unadsorb="onUnadsorb"
-    />
-  </div>
-</template>
 
 <style scoped></style>

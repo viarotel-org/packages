@@ -1,3 +1,28 @@
+<template>
+  <div
+    ref="floatBubble"
+    class="float-bubble"
+    :style="[offsetStyle, transitionStyle]"
+    @mousedown.prevent="onMousedown"
+    @mouseup.prevent="onMouseup"
+  >
+    <slot>
+      <div
+        class="float-bubble-default"
+        :style="[sizeStyle]"
+        :class="[bubbleClass]"
+      >
+        <span v-if="text">{{ text }}</span>
+        <img v-else-if="image" :src="image" alt="" class="w-2/3">
+        <span v-else class="text-center">
+          {{ writeOffset.x }} <br>
+          {{ writeOffset.y }}
+        </span>
+      </div>
+    </slot>
+  </div>
+</template>
+
 <script>
 import { debounce } from "lodash-es"
 import { createWriteProps } from "@/utils/index.js"
@@ -329,31 +354,6 @@ export default {
   },
 }
 </script>
-
-<template>
-  <div
-    ref="floatBubble"
-    class="float-bubble"
-    :style="[offsetStyle, transitionStyle]"
-    @mousedown.prevent="onMousedown"
-    @mouseup.prevent="onMouseup"
-  >
-    <slot>
-      <div
-        class="float-bubble-default"
-        :style="[sizeStyle]"
-        :class="[bubbleClass]"
-      >
-        <span v-if="text">{{ text }}</span>
-        <img v-else-if="image" :src="image" alt="" class="w-2/3">
-        <span v-else class="text-center">
-          {{ writeOffset.x }} <br>
-          {{ writeOffset.y }}
-        </span>
-      </div>
-    </slot>
-  </div>
-</template>
 
 <style lang="postcss">
 .float-bubble {

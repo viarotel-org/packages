@@ -13,5 +13,6 @@ module.exports = {
     "@typescript-eslint/semi": "off",
     // vue
     "vue/no-unused-refs": "off",
+    "vue/component-tags-order": "off",
   },
 }
