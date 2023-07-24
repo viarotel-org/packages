@@ -41,12 +41,14 @@
   "scripts": {
     "build": "unbuild"
   },
-  "devDependencies": {
+  "dependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/compiler-sfc": "^3.3.4",
-    "unbuild": "latest",
-    "vite": "^4.4.0",
     "vue3": "npm:vue@^3.3.4"
+  },
+  "devDependencies": {
+    "unbuild": "latest",
+    "vite": "^4.4.0"
   }
 }

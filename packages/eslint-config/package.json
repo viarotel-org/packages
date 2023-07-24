@@ -40,7 +40,7 @@
   "scripts": {
     "build": "unbuild"
   },
-  "devDependencies": {
+  "dependencies": {
     "@antfu/eslint-config": "^0.39.8"
   }
 }

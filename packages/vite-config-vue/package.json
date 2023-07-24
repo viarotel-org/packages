@@ -47,10 +47,12 @@
   "scripts": {
     "build": "unbuild"
   },
-  "devDependencies": {
+  "dependencies": {
     "@viarotel-org/vite-config-vue2": "workspace:^",
     "@viarotel-org/vite-config-vue2s": "workspace:^",
-    "@viarotel-org/vite-config-vue3": "workspace:^",
+    "@viarotel-org/vite-config-vue3": "workspace:^"
+  },
+  "devDependencies": {
     "unbuild": "latest",
     "vite": "^4.4.5"
   }
