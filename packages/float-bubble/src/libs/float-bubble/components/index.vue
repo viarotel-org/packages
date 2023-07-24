@@ -1,8 +1,8 @@
 <script>
-import { debounce } from 'lodash-es'
-import { createWriteProps } from '@/utils/index.js'
+import { debounce } from "lodash-es"
+import { createWriteProps } from "@/utils/index.js"
 
-const writeProps = createWriteProps(['offset'])
+const writeProps = createWriteProps(["offset"])
 
 export default {
   props: {
@@ -26,7 +26,7 @@ export default {
     },
     parent: {
       type: String,
-      default: 'body',
+      default: "body",
     },
     magnet: {
       type: Boolean,
@@ -34,22 +34,22 @@ export default {
     },
     text: {
       type: String,
-      default: '',
+      default: "",
     },
     image: {
       type: String,
-      default: '',
+      default: "",
     },
     size: {
       type: String,
-      default: '50px',
+      default: "50px",
     },
     bubbleClass: {
       type: [String, Object],
-      default: '',
+      default: "",
     },
   },
-  emits: ['unadsorb', 'adsorb', 'update:offset'],
+  emits: ["unadsorb", "adsorb", "update:offset"],
   data() {
     return {
       ...writeProps.data,
@@ -83,12 +83,12 @@ export default {
     },
     transitionStyle() {
       if (!this.transition) {
-        return ''
+        return ""
       }
       return {
-        'transition-property': 'all',
-        'transition-duration': '300ms',
-        'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        "transition-property": "all",
+        "transition-duration": "300ms",
+        "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
       }
     },
     gapX() {
@@ -117,33 +117,41 @@ export default {
     this.emitAdsorb = debounce(this.emitAdsorb, 500)
   },
   mounted() {
+    this.parentEl = document.querySelector(this.parent)
     this.init()
-    this.parentEl.addEventListener('mousemove', this.onMousemove)
-    this.parentEl.addEventListener('mouseleave', this.onMouseleave)
-    window.addEventListener('resize', this.init)
+    this.parentEl.addEventListener("mousemove", this.onMousemove)
+    this.parentEl.addEventListener("mouseleave", this.onMouseleave)
+    window.addEventListener("resize", this.init)
   },
   beforeUnmount() {
-    this.parentEl.removeEventListener('mousemove', this.onMousemove)
-    this.parentEl.removeEventListener('mouseleave', this.onMouseleave)
-    window.removeEventListener('resize', this.init)
+    this.parentEl.removeEventListener("mousemove", this.onMousemove)
+    this.parentEl.removeEventListener("mouseleave", this.onMouseleave)
+    window.removeEventListener("resize", this.init)
   },
   methods: {
     init() {
-      this.parentEl = document.querySelector(this.parent)
       this.parentRect = this.parentEl.getBoundingClientRect()
       this.floatRect = this.$refs.floatBubble.getBoundingClientRect()
-
+      this.addRelative()
       this.setPosition()
+    },
+    addRelative() {
+      const styles = window.getComputedStyle(this.parentEl)
+      const noStatic = styles.position !== "static"
+      if (noStatic) {
+        return
+      }
+      this.parentEl.style.position = "relative"
     },
     adsorbUpdate() {
       this.writeOffset = { ...this.writeOffset }
     },
     emitAdsorb(...params) {
-      if (params[0].type === 'none') {
-        this.$emit('unadsorb', ...params)
+      if (params[0].type === "none") {
+        this.$emit("unadsorb", ...params)
         return
       }
-      this.$emit('adsorb', ...params)
+      this.$emit("adsorb", ...params)
     },
     setOffset(value) {
       value = this.safeRule({
@@ -160,13 +168,13 @@ export default {
         offset: { ...this.writeOffset },
       }
       if (offsetX >= this.parentRect.width - this.floatRect.width) {
-        value.type = 'right'
+        value.type = "right"
       }
       else if (offsetX <= 0) {
-        value.type = 'left'
+        value.type = "left"
       }
       else {
-        value.type = 'none'
+        value.type = "none"
       }
       return value
     },
@@ -213,8 +221,8 @@ export default {
     },
     setPosition() {
       if (
-        typeof this.position.bottom === 'number'
-        && typeof this.position.right === 'number'
+        typeof this.position.bottom === "number"
+        && typeof this.position.right === "number"
       ) {
         this.setOffset({
           x: this.parentRect.width - this.halfRect.width - this.position.right,
@@ -225,8 +233,8 @@ export default {
         })
       }
       else if (
-        typeof this.position.bottom === 'number'
-        && typeof this.position.left === 'number'
+        typeof this.position.bottom === "number"
+        && typeof this.position.left === "number"
       ) {
         this.setOffset({
           x: this.halfRect.width + this.position.left,
@@ -237,8 +245,8 @@ export default {
         })
       }
       else if (
-        this.position.bottom === 'center'
-        && typeof this.position.right == 'number'
+        this.position.bottom === "center"
+        && typeof this.position.right == "number"
       ) {
         this.setOffset({
           x: this.parentRect.width - this.halfRect.width - this.position.right,
@@ -246,8 +254,8 @@ export default {
         })
       }
       else if (
-        this.position.bottom === 'center'
-        && typeof this.position.left == 'number'
+        this.position.bottom === "center"
+        && typeof this.position.left == "number"
       ) {
         this.setOffset({
           x: this.halfRect.width + this.position.left,
@@ -283,7 +291,7 @@ export default {
         offsetY: this.writeOffset.y,
       })
 
-      if (adsorb.type !== 'none') {
+      if (adsorb.type !== "none") {
         return
       }
 
@@ -337,16 +345,8 @@ export default {
         :class="[bubbleClass]"
       >
         <span v-if="text">{{ text }}</span>
-        <img
-          v-else-if="image"
-          :src="image"
-          alt=""
-          class="w-2/3"
-        >
-        <span
-          v-else
-          class="text-center"
-        >
+        <img v-else-if="image" :src="image" alt="" class="w-2/3">
+        <span v-else class="text-center">
           {{ writeOffset.x }} <br>
           {{ writeOffset.y }}
         </span>
@@ -357,7 +357,7 @@ export default {
 
 <style lang="postcss">
 .float-bubble {
-  @apply cursor-pointer absolute z-2999;
+  @apply cursor-pointer absolute z-2999 top-0 left-0;
   .float-bubble-default {
     @apply rounded-full shadow-lg flex items-center justify-center border bg-white text-xs hover:bg-gray-100 !active:bg-gray-200 p-1;
   }
