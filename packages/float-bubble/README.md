@@ -22,6 +22,9 @@ import FloatBubble from '@viarotel-org/float-bubble/vue2s'
 // vue2.6 以下
 import FloatBubble from '@viarotel-org/float-bubble/vue2'
 
+// 导入样式
+import '@viarotel-org/float-bubble/style'
+
 // vue3
 app.use(FloatBubble)
 
