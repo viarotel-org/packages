@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/viarotel-org/packages/compare/v0.4.2...v0.4.3) (2023-07-25)
+
+
+### Performance Improvements
+
+*  float-bubble组件增加了新的主题系统 ([5e53ae7](https://github.com/viarotel-org/packages/commit/5e53ae7c27d139439797dcd32e0a754fee301552))
+
+
+
+
+
 ## [0.4.2](https://github.com/viarotel-org/packages/compare/v0.4.1...v0.4.2) (2023-07-24)
 
 
