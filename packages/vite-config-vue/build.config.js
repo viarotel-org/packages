@@ -1,22 +1,22 @@
-import { defineBuildConfig } from "unbuild"
+import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   entries: [
-    "./src/index",
+    './src/index',
     {
-      name: "vue2",
-      input: "./src/vue2/index.js",
-      outDir: "./dist",
+      name: 'vue2',
+      input: './src/vue2/index.js',
+      outDir: './dist',
     },
     {
-      name: "vue2s",
-      input: "./src/vue2s/index.js",
-      outDir: "./dist",
+      name: 'vue2s',
+      input: './src/vue2s/index.js',
+      outDir: './dist',
     },
     {
-      name: "vue3",
-      input: "./src/vue3/index.js",
-      outDir: "./dist",
+      name: 'vue3',
+      input: './src/vue3/index.js',
+      outDir: './dist',
     },
   ],
   clean: true,
@@ -25,9 +25,9 @@ export default defineBuildConfig({
     emitCJS: true,
   },
   externals: [
-    "vite",
-    "@viarotel-org/vite-config-vue2",
-    "@viarotel-org/vite-config-vue2s",
-    "@viarotel-org/vite-config-vue3",
+    'vite',
+    '@viarotel-org/vite-config-vue2',
+    '@viarotel-org/vite-config-vue2s',
+    '@viarotel-org/vite-config-vue3',
   ],
 })

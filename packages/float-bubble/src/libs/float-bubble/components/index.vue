@@ -6,7 +6,12 @@
     @mousedown.prevent="onMousedown"
     @mouseup.prevent="onMouseup"
   >
-    <slot>
+    <slot
+      :adsorbed="adsorbed"
+      :adsorb-type="adsorbType"
+      :set-adsorbed="(value) => (adsorbed = value)"
+      :update-adsorb="updateAdsorb"
+    >
       <div
         class="float-bubble-default"
         :style="[sizeStyle]"
@@ -24,10 +29,10 @@
 </template>
 
 <script>
-import { debounce } from "lodash-es"
-import { createWriteProps } from "@/utils/index.js"
+import { debounce } from 'lodash-es'
+import { createWriteProps } from '@/utils/index.js'
 
-const writeProps = createWriteProps(["offset"])
+const writeProps = createWriteProps(['offset'])
 
 export default {
   props: {
@@ -41,7 +46,7 @@ export default {
     position: {
       type: Object,
       default: () => ({
-        bottom: 24,
+        bottom: 'center',
         right: 24,
       }),
     },
@@ -51,7 +56,7 @@ export default {
     },
     parent: {
       type: String,
-      default: "body",
+      default: 'body',
     },
     magnet: {
       type: Boolean,
@@ -59,22 +64,22 @@ export default {
     },
     text: {
       type: String,
-      default: "",
+      default: '',
     },
     image: {
       type: String,
-      default: "",
+      default: '',
     },
     size: {
       type: String,
-      default: "50px",
+      default: '50px',
     },
     bubbleClass: {
       type: [String, Object],
-      default: "",
+      default: '',
     },
   },
-  emits: ["unadsorb", "adsorb", "update:offset"],
+  emits: ['unadsorb', 'adsorb', 'update:offset'],
   data() {
     return {
       ...writeProps.data,
@@ -89,6 +94,8 @@ export default {
         height: 0,
       },
       parentEl: null,
+      adsorbed: false,
+      adsorbType: '',
     }
   },
   computed: {
@@ -108,12 +115,12 @@ export default {
     },
     transitionStyle() {
       if (!this.transition) {
-        return ""
+        return ''
       }
       return {
-        "transition-property": "all",
-        "transition-duration": "300ms",
-        "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+        'transition-property': 'all',
+        'transition-duration': '300ms',
+        'transition-timing-function': 'cubic-bezier(0.4, 0, 0.2, 1)',
       }
     },
     gapX() {
@@ -144,39 +151,47 @@ export default {
   mounted() {
     this.parentEl = document.querySelector(this.parent)
     this.init()
-    this.parentEl.addEventListener("mousemove", this.onMousemove)
-    this.parentEl.addEventListener("mouseleave", this.onMouseleave)
-    window.addEventListener("resize", this.init)
+    this.parentEl.addEventListener('mousemove', this.onMousemove)
+    this.parentEl.addEventListener('mouseleave', this.onMouseleave)
+    window.addEventListener('resize', this.init)
   },
   beforeUnmount() {
-    this.parentEl.removeEventListener("mousemove", this.onMousemove)
-    this.parentEl.removeEventListener("mouseleave", this.onMouseleave)
-    window.removeEventListener("resize", this.init)
+    this.parentEl.removeEventListener('mousemove', this.onMousemove)
+    this.parentEl.removeEventListener('mouseleave', this.onMouseleave)
+    window.removeEventListener('resize', this.init)
   },
   methods: {
     init() {
       this.parentRect = this.parentEl.getBoundingClientRect()
       this.floatRect = this.$refs.floatBubble.getBoundingClientRect()
-      this.addRelative()
+      this.configParent()
       this.setPosition()
     },
-    addRelative() {
+    configParent() {
       const styles = window.getComputedStyle(this.parentEl)
-      const noStatic = styles.position !== "static"
-      if (noStatic) {
-        return
+      if (this.magnet) {
+        if (styles.overflowX === 'visible') {
+          this.parentEl.style.overflowX = 'hidden'
+        }
       }
-      this.parentEl.style.position = "relative"
+
+      if (styles.position === 'static') {
+        this.parentEl.style.position = 'relative'
+      }
     },
-    adsorbUpdate() {
+    updateAdsorb() {
       this.writeOffset = { ...this.writeOffset }
     },
     emitAdsorb(...params) {
-      if (params[0].type === "none") {
-        this.$emit("unadsorb", ...params)
+      if (params[0].type === 'none') {
+        this.adsorbed = false
+        this.adsorbType = ''
+        this.$emit('unadsorb', ...params)
         return
       }
-      this.$emit("adsorb", ...params)
+      this.adsorbed = true
+      this.adsorbType = params[0]?.type
+      this.$emit('adsorb', ...params)
     },
     setOffset(value) {
       value = this.safeRule({
@@ -193,13 +208,13 @@ export default {
         offset: { ...this.writeOffset },
       }
       if (offsetX >= this.parentRect.width - this.floatRect.width) {
-        value.type = "right"
+        value.type = 'right'
       }
       else if (offsetX <= 0) {
-        value.type = "left"
+        value.type = 'left'
       }
       else {
-        value.type = "none"
+        value.type = 'none'
       }
       return value
     },
@@ -245,48 +260,34 @@ export default {
       }
     },
     setPosition() {
-      if (
-        typeof this.position.bottom === "number"
-        && typeof this.position.right === "number"
-      ) {
-        this.setOffset({
-          x: this.parentRect.width - this.halfRect.width - this.position.right,
-          y:
-            this.parentRect.height
-            - this.halfRect.height
-            - this.position.bottom,
-        })
+      let offsetY = 0
+      let offsetX = 0
+
+      if (typeof this.position.top === 'number') {
+        offsetY = this.position.top + this.halfRect.height
       }
-      else if (
-        typeof this.position.bottom === "number"
-        && typeof this.position.left === "number"
-      ) {
-        this.setOffset({
-          x: this.halfRect.width + this.position.left,
-          y:
-            this.parentRect.height
-            - this.halfRect.height
-            - this.position.bottom,
-        })
+      else if (typeof this.position.bottom === 'number') {
+        offsetY = this.parentRect.height - this.position.bottom
       }
-      else if (
-        this.position.bottom === "center"
-        && typeof this.position.right == "number"
-      ) {
-        this.setOffset({
-          x: this.parentRect.width - this.halfRect.width - this.position.right,
-          y: this.parentRect.height / 2 - this.halfRect.height,
-        })
+      else if (this.position.top === 'center') {
+        offsetY = this.parentRect.height / 2
       }
-      else if (
-        this.position.bottom === "center"
-        && typeof this.position.left == "number"
-      ) {
-        this.setOffset({
-          x: this.halfRect.width + this.position.left,
-          y: this.parentRect.height / 2 - this.halfRect.height,
-        })
+      else if (this.position.bottom === 'center') {
+        offsetY = this.parentRect.height / 2
       }
+
+      if (typeof this.position.left === 'number') {
+        offsetX = this.position.left + this.halfRect.width
+      }
+      else if (typeof this.position.right === 'number') {
+        offsetX
+          = this.parentRect.width - this.position.right - this.halfRect.width
+      }
+
+      this.setOffset({
+        y: offsetY,
+        x: offsetX,
+      })
     },
     onMousedown(event) {
       // console.log('onMousedown.event', event)
@@ -316,7 +317,7 @@ export default {
         offsetY: this.writeOffset.y,
       })
 
-      if (adsorb.type !== "none") {
+      if (adsorb.type !== 'none') {
         return
       }
 

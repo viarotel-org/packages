@@ -1,6 +1,6 @@
-import { defineConfig } from "vite"
-import { createVuePlugin as useVue2 } from "vite-plugin-vue2"
-import * as compiler from "vue-template-compiler"
+import { defineConfig } from 'vite'
+import { createVuePlugin as useVue2 } from 'vite-plugin-vue2'
+import * as compiler from 'vue-template-compiler'
 
 export const presetConfig = {
   plugins: [
@@ -13,7 +13,7 @@ export const presetConfig = {
   ],
   resolve: {
     alias: {
-      vue: "vue2",
+      vue: 'vue2',
     },
   },
 }

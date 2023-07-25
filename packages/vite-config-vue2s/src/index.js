@@ -1,7 +1,7 @@
-import { defineConfig } from "vite"
-import useVue2s from "@vitejs/plugin-vue2"
-import useJsx2s from "@vitejs/plugin-vue2-jsx"
-import * as compiler from "@vue/compiler-sfc"
+import { defineConfig } from 'vite'
+import useVue2s from '@vitejs/plugin-vue2'
+import useJsx2s from '@vitejs/plugin-vue2-jsx'
+import * as compiler from '@vue/compiler-sfc'
 
 export const presetConfig = {
   plugins: [
@@ -12,7 +12,7 @@ export const presetConfig = {
   ],
   resolve: {
     alias: {
-      vue: "vue2s",
+      vue: 'vue2s',
     },
   },
 }

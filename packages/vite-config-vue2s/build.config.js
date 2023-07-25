@@ -1,17 +1,17 @@
-import { defineBuildConfig } from "unbuild"
+import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
-  entries: ["./src/index"],
+  entries: ['./src/index'],
   clean: true,
   failOnWarn: false,
   rollup: {
     emitCJS: true,
   },
   externals: [
-    "vite",
-    "@vitejs/plugin-vue2",
-    "@vitejs/plugin-vue2-jsx",
-    "@vue/compiler-sfc",
-    "vue2s",
+    'vite',
+    '@vitejs/plugin-vue2',
+    '@vitejs/plugin-vue2-jsx',
+    '@vue/compiler-sfc',
+    'vue2s',
   ],
 })

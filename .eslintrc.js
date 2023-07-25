@@ -1,3 +1,3 @@
 module.exports = {
-  extends: "@viarotel-org/eslint-config",
+  extends: ['@viarotel-org'],
 }

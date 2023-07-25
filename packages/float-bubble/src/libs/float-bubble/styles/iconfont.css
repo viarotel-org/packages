@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4182704 */
+  src: 
+       url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAREAAsAAAAACQwAAAP2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDMgqFCIQyATYCJAMUCwwABCAFhGcHXBvoB1GUDkqU7IckyUwPAgU87SciwCICAAcAgAKBAEA8/Lff7/eZmXtxa65NbHUSiUx6idJIEDIlWKayCEkTfKs/v8upfpKuSYsEiCfqXmhjj5csL+nen4V7ZaCEhZWVlhXGBPUyZKf3gT8NWABx62EHOIr3rf8re0wytp7lH+5nvCj7E3iLdqxMKgv8ONt4QAPqtu2ixa/BTtBvGV51kLtxiUC7dce6p9ePL7DRiLiGHXP01iAqjYZWESxxFqWCGlr1NXRlEbeopOv0AsCN9/7xFxTBIKky/ayzy6sUJs9F7W4PNiGQ3wD2V4NHJ1TIWJ6ZLa6qPQ29ILOsp70oNecQKL9rlaTv4fRz2tDqZk2QYm26duMfHklWBFHTNZ2EcJgtfBdZHBLfdRwy3w0cCj862bloKjK+HR14BSBakGG6z3uthJjuhHI4YjGC2gtEJVz8cBWhYmtHbJRYgPMsDj4PKHCBbUIs5bmWiIWE4PJ+DL6ISTP7mKAorZvFci+x2VBLOEeWtAuW4WFXBgJfrxHi/RbB3m7MxbijxpJqolANq/eLYMGBGWJuCBucxaf7Y3HjBODCYCOxM+IEQPd55+5ukJmDHLmdIdjlj8rsG1vcHXg/KE7vYRNLo5K8jN7t+RFxelr3sBiLZrYfgilASIjpwZApNB06MD1HbU1tUceEQgsTogGUCpRQrmfZpsDAflPX0FFT6Hg2z2BMgquBdU9dlO6X7Ge60r/9ApHX3O8705ue55oeoQj18QlVROgpoSsM20co9NSQtCY39pafxG9L6ryJ65vjU4IjqpDbopbGAKOl8Pf4P62SkcuxM7XjxIyWtTg7JjyBqqpYlUEQrTBUhX04f9iVD1xRmfABPI5RToNPDi2sEHPFy9/b3IeqMGeOCBR7A9A8y8+9A2+4vnefdwHpXy8Q5u9fBIK7icmbxM3D/4yOAr6e1A0KN8+K9pKXrQWW/BraOCBqUUREW4rqLZeg2FzcT1/iB6j5FwL9/vrxDYDIFVo5KYakxQRkrSYxhbAIlQ6bUGu1B+2WXK3vMMDqidKGWR8IQq8vSLo9QdbrG1MIv1AZ1kKt1z+0O4/13TrMRuoFYcSYingsdGJqaerZ6/YJVb+MKC/5htRoHBeB66fzN1gjdTGnGaiQWQpJphLXzHlYlkZYMjkm7GbMdt/zZNGjuImp4AJBEYZSQmxM0BJGTTronPx8T5DSV4oQEPPmIg0lJt0LAZcPwNxoalDDmfRvDCghxiQ1TiJGRbhWXKg0MoZgi4flUIK5shYpa59H0CRU446vqy5wB7TTn66KFDlKVFGrL6O66Ou5DEu7GRGZoVOiZCc2ZbqVjJJWGWMGAAAA') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4182704_egqut4hs2zi.ttf?t=1690273012027') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  /* font-size: 16px; */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fankui:before {
+  content: "\e738";
+}
+
+.icon-help:before {
+  content: "\e677";
+}
+
+.icon-arrow-left-bold:before {
+  content: "\e685";
+}
+
+.icon-arrow-right-bold:before {
+  content: "\e687";
+}
+

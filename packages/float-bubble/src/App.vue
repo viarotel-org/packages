@@ -1,34 +1,30 @@
 <template>
-  <div class="h-full relative float-bubble-container">
-    <float-bubble
-      ref="floatBubble"
-      parent=".float-bubble-container"
-      :magnet="magneted"
-      :position="{
-        right: 24,
-        bottom: 'center',
-      }"
-      @adsorb="onAdsorb"
-      @unadsorb="onUnadsorb"
-    />
+  <div class="h-full relative overflow-hidden flex items-center justify-center">
+    <div class="float-bubble-container w-100 h-200 border border-red-500">
+      <FloatBubble
+        ref="floatBubble"
+        :magnet="true"
+        parent=".float-bubble-container"
+        :gap="0"
+        :position="{
+          top: 'center',
+          left: 0,
+        }"
+      >
+        <template #default="handler">
+          <FloatBubbleTheme v-bind="handler" />
+        </template>
+      </FloatBubble>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      magneted: true,
-    }
+    return {}
   },
-  methods: {
-    onAdsorb(event) {
-      console.log("onAdsorb.event", event)
-    },
-    onUnadsorb(event) {
-      console.log("onUnadsorb.event", event)
-    },
-  },
+  methods: {},
 }
 </script>
 

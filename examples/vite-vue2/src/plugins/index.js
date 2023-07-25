@@ -1,4 +1,4 @@
-import FloatBubble from "./float-bubble/index"
+import FloatBubble from './float-bubble/index'
 
 export default {
   install(app) {

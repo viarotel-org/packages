@@ -1,6 +1,6 @@
 import 'virtual:uno.css'
 import { install } from 'vue-demi'
-import FloatBubble from './float-bubble/index'
+import { FloatBubble, FloatBubbleTheme } from './float-bubble/index'
 
 install()
 
@@ -10,4 +10,4 @@ export default {
   },
 }
 
-export { FloatBubble }
+export { FloatBubble, FloatBubbleTheme }

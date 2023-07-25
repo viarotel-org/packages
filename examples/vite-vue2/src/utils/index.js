@@ -1,5 +1,5 @@
-import { camelCase, kebabCase } from "lodash-es"
-import { computed, ref, unref } from "vue-demi"
+import { camelCase, kebabCase } from 'lodash-es'
+import { computed, ref, unref } from 'vue-demi'
 
 /**
  * 根据传入的props创建局部可写的参数
@@ -8,7 +8,7 @@ import { computed, ref, unref } from "vue-demi"
  */
 export function createWriteProps(
   propNames,
-  { prefix = "write", emitUpdate = true, setCallback = null } = {},
+  { prefix = 'write', emitUpdate = true, setCallback = null } = {},
 ) {
   return {
     data: propNames.reduce((obj, name) => {

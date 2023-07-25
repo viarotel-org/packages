@@ -1,6 +1,7 @@
 {
   "name": "packages",
   "description": "viarotel's packages",
+
   "scripts": {
     "lint": "pnpm lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --ignore-path .eslintignore --fix",
