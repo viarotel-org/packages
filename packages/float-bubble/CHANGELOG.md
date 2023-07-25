@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/viarotel-org/packages/compare/v0.4.3...v0.4.4) (2023-07-25)
+
+
+### Bug Fixes
+
+* 修复主题预设中主题色变量发布后未定义的问题 ([7e095d5](https://github.com/viarotel-org/packages/commit/7e095d59bae4d764a794a0b33053eb18ff7ce484))
+* bugfix ([15b3c44](https://github.com/viarotel-org/packages/commit/15b3c44a0621058cd4ab19ced69b7b9433185280))
+
+
+
+
+
 ## [0.4.3](https://github.com/viarotel-org/packages/compare/v0.4.2...v0.4.3) (2023-07-25)
 
 
