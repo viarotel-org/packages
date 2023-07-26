@@ -1,10 +1,10 @@
 {
-  "name": "@viarotel-org/unocss-config",
+  "name": "@viarotel-org/scripts",
   "version": "0.4.3",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@163.com>",
   "license": "ISC",
-  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/unocss-config#readme",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/scripts#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
@@ -13,38 +13,30 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "keywords": [
-    "unocss",
+    "eslint",
     "config",
     "preset"
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "require": "./node/common/index.js",
+      "import": "./node/module/index.js"
     },
     "./*": "./*"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "main": "./node/common/index.js",
+  "module": "./node/module/index.js",
   "directories": {
-    "lib": "dist"
+    "lib": "node"
   },
   "files": [
-    "dist",
-    "src"
+    "**/*",
+    "!node_modules"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "unbuild"
-  },
   "dependencies": {
-    "@unocss/transformer-directives": "^0.53.5",
-    "unocss": "^0.53.5",
-    "unocss-applet": "^0.5.3"
-  },
-  "devDependencies": {
-    "unbuild": "latest"
+    "fs-extra": "^11.1.1"
   }
 }

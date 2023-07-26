@@ -16,5 +16,6 @@ export default {
     // vue
     'vue/no-unused-refs': 'off',
     'vue/component-tags-order': 'off',
+    'vue/html-self-closing': 'off',
   },
 }

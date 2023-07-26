@@ -1,0 +1,46 @@
+{
+  "name": "@viarotel-org/design",
+  "version": "0.4.3",
+  "description": "viarotel's package",
+  "author": "viarotel <viarotel@163.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/design#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "preset"
+  ],
+  "exports": {
+    ".": {
+      "import": "./styles/desktop/index.js"
+    },
+    "./*": "./*",
+    "./styles/base": "./styles/base/index.js",
+    "./styles/desktop": "./styles/desktop/index.js",
+    "./styles/mobile": "./styles/mobile/index.js",
+    "./styles/applet": "./styles/applet/index.js",
+    "./styles/vars": "./styles/vars/index.js"
+  },
+  "main": "./styles/desktop/index.js",
+  "module": "./styles/desktop/index.js",
+  "directories": {
+    "lib": "styles"
+  },
+  "files": [
+    "**/*",
+    "!node_modules"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.53.5"
+  }
+}

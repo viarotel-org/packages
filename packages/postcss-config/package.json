@@ -1,10 +1,10 @@
 {
-  "name": "@viarotel-org/vite-config-vue2s",
-  "version": "0.4.5",
+  "name": "@viarotel-org/postcss-config",
+  "version": "0.4.3",
   "description": "viarotel's package",
-  "author": "viarotel <viarotel@qq.com>",
+  "author": "viarotel <viarotel@163.com>",
   "license": "ISC",
-  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue2s#readme",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/postcss-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
@@ -13,8 +13,7 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "keywords": [
-    "vite",
-    "vue",
+    "eslint",
     "config",
     "preset"
   ],
@@ -41,13 +40,9 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@vitejs/plugin-vue2": "^2.2.0",
-    "@vitejs/plugin-vue2-jsx": "^1.1.0",
-    "@vue/compiler-sfc": "^2.7.14",
-    "vue2s": "npm:vue@^2.7.14"
-  },
-  "devDependencies": {
-    "unbuild": "latest",
-    "vite": "^4.4.0"
+    "@bundled-es-modules/deepmerge": "^4.3.1",
+    "postcss-nested": "^6.0.1",
+    "postcss-remove-inline-comments": "^0.0.2",
+    "postcss-scss": "^4.0.6"
   }
 }

@@ -55,10 +55,11 @@
     "dev:3": "pnpm switch:3 && vite --mode vue3",
     "dev:2s": "pnpm switch:2s && vite --mode vue2s",
     "dev:2": "pnpm switch:2 && vite --mode vue2",
-    "build": "pnpm build:3 && pnpm build:2s && pnpm build:2",
+    "build": "pnpm build:3 && pnpm build:2s && pnpm build:2 && pnpm build:example",
     "build:3": "pnpm switch:3 && vite build --mode vue3",
     "build:2s": "pnpm switch:2s && vite build --mode vue2s",
     "build:2": "pnpm switch:2 && vite build --mode vue2",
+    "build:example": "pnpm switch:2 && vite build --mode example",
     "switch:3": "vue-demi-switch 3 vue3",
     "switch:2s": "vue-demi-switch 2.7 vue2s",
     "switch:2": "vue-demi-switch 2 vue2",
@@ -69,10 +70,12 @@
     "vue": "^2.6.14 || ^3.3.4"
   },
   "dependencies": {
+    "@viarotel-org/design": "workspace:^",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
   },
   "devDependencies": {
+    "@viarotel-org/postcss-config": "workspace:^",
     "@viarotel-org/unocss-config": "workspace:^",
     "@viarotel-org/vite-config-vue": "workspace:^",
     "cross-env": "^7.0.3",

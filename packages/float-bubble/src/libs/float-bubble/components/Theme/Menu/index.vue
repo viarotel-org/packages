@@ -7,7 +7,7 @@
       v-if="adsorbed && adsorbType === 'right'"
       class="flex items-center justify-center w-6 iconfont icon-arrow-left-bold"
       @click.stop="handleCollapse"
-    />
+    ></div>
 
     <div class="">
       <component
@@ -30,7 +30,7 @@
             alt=""
             class="w-1/3"
             :class="[item.class]"
-          >
+          />
 
           <span v-if="item.text" class="text-sm pt-[2px]">
             {{ item.text }}
@@ -41,13 +41,13 @@
       <div v-if="!data || !data.length" class="write-vertical-left py-4 px-3">
         暂无数据
       </div>
-
-      <div
-        v-if="adsorbed && adsorbType === 'left'"
-        class="flex items-center justify-center w-6 iconfont icon-arrow-right-bold"
-        @click.stop="handleCollapse"
-      />
     </div>
+
+    <div
+      v-if="adsorbed && adsorbType === 'left'"
+      class="flex items-center justify-center w-6 iconfont icon-arrow-right-bold"
+      @click.stop="handleCollapse"
+    ></div>
   </div>
 </template>
 

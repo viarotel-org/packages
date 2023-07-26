@@ -1,11 +1,9 @@
-# `@viarotel-org/vite-config-vue`
+# `@viarotel-org/vite-config-vue2`
 
 > viarotel's package
 
 ## Usage
 
 ```
-import viteConfigVue from '@viarotel-org/vite-config-vue';
-
-// TODO: DEMONSTRATE API
+import viteConfigVue2 from '@viarotel-org/vite-config-vue2';
 ```

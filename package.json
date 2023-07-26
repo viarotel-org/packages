@@ -1,7 +1,6 @@
 {
   "name": "packages",
   "description": "viarotel's packages",
-
   "scripts": {
     "lint": "pnpm lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --ignore-path .eslintignore --fix",
@@ -11,15 +10,9 @@
   },
   "devDependencies": {
     "@nx/nx-win32-x64-msvc": "^16.5.4",
-    "@unocss/reset": "^0.53.5",
-    "@unocss/transformer-directives": "^0.53.5",
     "@viarotel-org/eslint-config": "workspace:^",
     "eslint": "^8.45.0",
-    "lerna": "^7.1.4",
-    "postcss-nested": "^6.0.1",
-    "postcss-remove-inline-comments": "^0.0.2",
-    "postcss-scss": "^4.0.6",
-    "unocss": "^0.53.5"
+    "lerna": "^7.1.4"
   },
   "pnpm": {
     "overrides": {
