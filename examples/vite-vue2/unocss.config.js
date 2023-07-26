@@ -1,5 +1,5 @@
 import { defineConfig } from 'unocss'
-import unocssConfig from '@viarotel-org/unocss-config/src/index.js'
+import unocssConfig from '@viarotel-org/unocss-config'
 
 export default defineConfig(
   unocssConfig({

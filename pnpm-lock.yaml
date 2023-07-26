@@ -51,7 +51,7 @@ importers:
   examples/vite-vue2:
     dependencies:
       '@viarotel-org/float-bubble':
-        specifier: workspace:^
+        specifier: latest
         version: link:../../packages/float-bubble
       '@vue/composition-api':
         specifier: ^1.7.1
@@ -61,10 +61,10 @@ importers:
         version: registry.npmmirror.com/lodash-es@4.17.21
     devDependencies:
       '@viarotel-org/unocss-config':
-        specifier: workspace:^
+        specifier: latest
         version: link:../../packages/unocss-config
       '@viarotel-org/vite-config-vue':
-        specifier: workspace:^
+        specifier: latest
         version: link:../../packages/vite-config-vue
       vite:
         specifier: ^4.4.0

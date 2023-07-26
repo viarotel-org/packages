@@ -24,12 +24,12 @@
     "vue": "~2.6.14"
   },
   "dependencies": {
-    "@viarotel-org/float-bubble": "workspace:^",
+    "@viarotel-org/float-bubble": "latest",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@viarotel-org/unocss-config": "workspace:^",
-    "@viarotel-org/vite-config-vue": "workspace:^",
+    "@viarotel-org/unocss-config": "latest",
+    "@viarotel-org/vite-config-vue": "latest",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue": "~2.6.14"
