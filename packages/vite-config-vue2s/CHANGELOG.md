@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/viarotel-org/packages/compare/v0.4.4...v0.4.5) (2023-07-26)
+
+
+### Performance Improvements
+
+* 优化 vite-config-vue 相关包代码提提升性能 ([4d40b57](https://github.com/viarotel-org/packages/commit/4d40b57b17be1df29c6524a0260b92c636a62862))
+
+
+
+
+
+
 ## [0.4.3](https://github.com/viarotel-org/packages/compare/v0.4.2...v0.4.3) (2023-07-25)
 
 
