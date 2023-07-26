@@ -9,10 +9,10 @@
         ref="floatBubble"
         parent=".float-bubble-container"
         :magnet="magneted"
-        :gap="0"
+        :gap="24"
         :position="{
           top: 'center',
-          right: 0,
+          right: 24,
         }"
       >
         <template #default="handler">
