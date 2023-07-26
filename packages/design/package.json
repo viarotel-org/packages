@@ -21,6 +21,11 @@
     ".": {
       "import": "./styles/desktop/index.js"
     },
+    "./styles/base": "./styles/base/index.js",
+    "./styles/desktop": "./styles/desktop/index.js",
+    "./styles/mobile": "./styles/mobile/index.js",
+    "./styles/applet": "./styles/applet/index.js",
+    "./styles/vars": "./styles/vars/index.js",
     "./*": "./*"
   },
   "main": "./styles/desktop/index.js",
