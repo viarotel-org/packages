@@ -54,7 +54,7 @@ importers:
   packages/float-bubble:
     dependencies:
       '@viarotel-org/design':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../design
       '@vue/composition-api':
         specifier: ^1.7.1
@@ -70,13 +70,13 @@ importers:
         version: registry.npmmirror.com/vue-demi@0.14.5(@vue/composition-api@1.7.1)(vue@2.6.14)
     devDependencies:
       '@viarotel-org/postcss-config':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../postcss-config
       '@viarotel-org/unocss-config':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../unocss-config
       '@viarotel-org/vite-config-vue':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../vite-config-vue
       cross-env:
         specifier: ^7.0.3
@@ -137,13 +137,13 @@ importers:
   packages/vite-config-vue:
     dependencies:
       '@viarotel-org/vite-config-vue2':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../vite-config-vue2
       '@viarotel-org/vite-config-vue2s':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../vite-config-vue2s
       '@viarotel-org/vite-config-vue3':
-        specifier: ^0.5.1
+        specifier: workspace:^
         version: link:../vite-config-vue3
     devDependencies:
       unbuild:
@@ -1714,7 +1714,6 @@ packages:
     name: '@nx/nx-win32-x64-msvc'
     version: 16.5.4
     engines: {node: '>= 10'}
-    os: [win32]
     dev: true
 
   registry.npmmirror.com/@nx/nx-win32-x64-msvc@16.5.5:
@@ -4781,7 +4780,7 @@ packages:
     dependencies:
       debug: registry.npmmirror.com/debug@3.2.7
       is-core-module: registry.npmmirror.com/is-core-module@2.12.1
-      resolve: registry.npmmirror.com/resolve@1.22.2
+      resolve: registry.npmmirror.com/resolve@1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5655,7 +5654,7 @@ packages:
       fs.realpath: registry.npmmirror.com/fs.realpath@1.0.0
       inflight: registry.npmmirror.com/inflight@1.0.6
       inherits: registry.npmmirror.com/inherits@2.0.4
-      minimatch: registry.npmmirror.com/minimatch@3.1.2
+      minimatch: registry.npmmirror.com/minimatch@3.0.5
       once: registry.npmmirror.com/once@1.4.0
       path-is-absolute: registry.npmmirror.com/path-is-absolute@1.0.1
     dev: true
@@ -6322,7 +6321,7 @@ packages:
     hasBin: true
     dependencies:
       async: registry.npmmirror.com/async@3.2.4
-      chalk: registry.npmmirror.com/chalk@4.1.2
+      chalk: registry.npmmirror.com/chalk@4.1.0
       filelist: registry.npmmirror.com/filelist@1.0.4
       minimatch: registry.npmmirror.com/minimatch@3.1.2
     dev: true
@@ -7200,7 +7199,7 @@ packages:
       array-differ: registry.npmmirror.com/array-differ@3.0.0
       array-union: registry.npmmirror.com/array-union@2.1.0
       arrify: registry.npmmirror.com/arrify@2.0.1
-      minimatch: registry.npmmirror.com/minimatch@3.1.2
+      minimatch: registry.npmmirror.com/minimatch@3.0.5
     dev: true
 
   registry.npmmirror.com/mute-stream@0.0.8:
