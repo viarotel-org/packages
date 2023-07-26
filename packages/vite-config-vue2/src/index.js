@@ -1,21 +1,26 @@
-import { defineConfig } from 'vite'
+import { mergeConfig } from 'vite'
 import { createVuePlugin as useVue2 } from 'vite-plugin-vue2'
 import * as compiler from 'vue-template-compiler'
 
-export const presetConfig = {
-  plugins: [
-    useVue2({
-      vueTemplateOptions: {
-        compiler,
+export function presetConfig(config = {}) {
+  return mergeConfig(
+    {
+      plugins: [
+        useVue2({
+          vueTemplateOptions: {
+            compiler,
+          },
+          jsx: true,
+        }),
+      ],
+      resolve: {
+        alias: {
+          vue: 'vue2',
+        },
       },
-      jsx: true,
-    }),
-  ],
-  resolve: {
-    alias: {
-      vue: 'vue2',
     },
-  },
+    config,
+  )
 }
 
-export default defineConfig(presetConfig)
+export default presetConfig

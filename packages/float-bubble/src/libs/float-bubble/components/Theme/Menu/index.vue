@@ -37,13 +37,17 @@
           </span>
         </div>
       </component>
-    </div>
 
-    <div
-      v-if="adsorbed && adsorbType === 'left'"
-      class="flex items-center justify-center w-6 iconfont icon-arrow-right-bold"
-      @click.stop="handleCollapse"
-    />
+      <div v-if="!data || !data.length" class="write-vertical-left py-4 px-3">
+        暂无数据
+      </div>
+
+      <div
+        v-if="adsorbed && adsorbType === 'left'"
+        class="flex items-center justify-center w-6 iconfont icon-arrow-right-bold"
+        @click.stop="handleCollapse"
+      />
+    </div>
   </div>
 </template>
 

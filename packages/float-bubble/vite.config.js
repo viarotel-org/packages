@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => {
   const version = env.VITE_VUE_VERSION
   console.log('version', version)
 
-  return resolveConfig(version, {
+  return resolveConfig({
+    version,
     plugins: [useEslint(), useUnoCSS()],
     resolve: {
       alias: {

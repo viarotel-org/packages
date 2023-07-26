@@ -63,9 +63,9 @@ importers:
       '@viarotel-org/unocss-config':
         specifier: latest
         version: link:../../packages/unocss-config
-      '@viarotel-org/vite-config-vue':
+      '@viarotel-org/vite-config-vue2':
         specifier: latest
-        version: link:../../packages/vite-config-vue
+        version: link:../../packages/vite-config-vue2
       vite:
         specifier: ^4.4.0
         version: registry.npmmirror.com/vite@4.4.5

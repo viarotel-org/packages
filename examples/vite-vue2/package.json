@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@viarotel-org/unocss-config": "latest",
-    "@viarotel-org/vite-config-vue": "latest",
+    "@viarotel-org/vite-config-vue2": "latest",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue": "~2.6.14"

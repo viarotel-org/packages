@@ -1,18 +1,22 @@
 <template>
-  <div class="h-full relative overflow-hidden flex items-center justify-center">
-    <div class="float-bubble-container w-100 h-200 border border-red-500">
+  <div class="h-full relative flex items-center justify-center">
+    <div class="float-bubble-container w-200 h-200 border border-red-500">
       <FloatBubble
         ref="floatBubble"
         :magnet="true"
         parent=".float-bubble-container"
-        :gap="0"
+        :gap="24"
         :position="{
           top: 'center',
-          left: 0,
+          right: 24,
         }"
       >
         <template #default="handler">
-          <FloatBubbleTheme v-bind="handler" />
+          <FloatBubbleTheme
+            ref="floatBubbleTheme"
+            v-bind="handler"
+            :data="menuData"
+          />
         </template>
       </FloatBubble>
     </div>
@@ -22,8 +26,26 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      menuData: [
+        {
+          hover: '帮助中心',
+          text: '帮助',
+          icon: 'iconfont icon-help',
+          class: 'text-[16px]',
+          click: () => {},
+        },
+        {
+          hover: '反馈问题',
+          text: '反馈',
+          icon: 'iconfont icon-fankui',
+          class: 'text-[16px]',
+          click: () => {},
+        },
+      ],
+    }
   },
+  mounted() {},
   methods: {},
 }
 </script>
