@@ -10,7 +10,7 @@ overrides:
   vue-demi: latest
   unbuild: latest
   vue2: npm:vue@~2.6.14
-  vue2s: npm:vue@^2.7.10
+  vue2s: npm:vue@^2.7.14
   vue3: npm:vue@^3.3.4
 
 importers:
@@ -64,10 +64,10 @@ importers:
         version: registry.npmmirror.com/lodash-es@4.17.21
       vue:
         specifier: ^2.6.14 || ^3.3.4
-        version: registry.npmmirror.com/vue@3.3.4
+        version: registry.npmmirror.com/vue@2.6.14
       vue-demi:
         specifier: latest
-        version: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
+        version: registry.npmmirror.com/vue-demi@0.14.5(@vue/composition-api@1.7.1)(vue@2.6.14)
     devDependencies:
       '@viarotel-org/postcss-config':
         specifier: workspace:^
@@ -91,7 +91,7 @@ importers:
         specifier: npm:vue@~2.6.14
         version: registry.npmmirror.com/vue@2.6.14
       vue2s:
-        specifier: npm:vue@^2.7.10
+        specifier: npm:vue@^2.7.14
         version: registry.npmmirror.com/vue@2.7.14
       vue3:
         specifier: npm:vue@^3.3.4
@@ -187,8 +187,8 @@ importers:
         specifier: ^2.7.14
         version: registry.npmmirror.com/@vue/compiler-sfc@2.7.14
       vue2s:
-        specifier: npm:vue@^2.7.10
-        version: registry.npmmirror.com/vue@2.7.10
+        specifier: npm:vue@^2.7.14
+        version: registry.npmmirror.com/vue@2.7.14
     devDependencies:
       unbuild:
         specifier: latest
@@ -1465,7 +1465,7 @@ packages:
     version: 7.1.4
     engines: {node: ^14.17.0 || >=16.0.0}
     dependencies:
-      chalk: registry.npmmirror.com/chalk@4.1.2
+      chalk: registry.npmmirror.com/chalk@4.1.0
       execa: registry.npmmirror.com/execa@5.0.0
       strong-log-transformer: registry.npmmirror.com/strong-log-transformer@2.1.0
     dev: true
@@ -2960,16 +2960,6 @@ packages:
       '@vue/compiler-core': registry.npmmirror.com/@vue/compiler-core@3.3.4
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
 
-  registry.npmmirror.com/@vue/compiler-sfc@2.7.10:
-    resolution: {integrity: sha512-55Shns6WPxlYsz4WX7q9ZJBL77sKE1ZAYNYStLs6GbhIOMrNtjMvzcob6gu3cGlfpCR4bT7NXgyJ3tly2+Hx8Q==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-2.7.10.tgz}
-    name: '@vue/compiler-sfc'
-    version: 2.7.10
-    dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser@7.22.7
-      postcss: registry.npmmirror.com/postcss@8.4.27
-      source-map: registry.npmmirror.com/source-map@0.6.1
-    dev: false
-
   registry.npmmirror.com/@vue/compiler-sfc@2.7.14:
     resolution: {integrity: sha512-aNmNHyLPsw+sVvlQFQ2/8sjNuLtK54TC6cuKnVzAY93ks4ZBrvwQSnkkIh7bsbNhum5hJBS00wSDipQ937f5DA==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-2.7.14.tgz}
     name: '@vue/compiler-sfc'
@@ -3120,7 +3110,7 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
       csstype: registry.npmmirror.com/csstype@3.1.2
 
-  registry.npmmirror.com/@vue/server-renderer@3.3.4(vue@3.3.4):
+  registry.npmmirror.com/@vue/server-renderer@3.3.4(vue@2.6.14):
     resolution: {integrity: sha512-Q6jDDzR23ViIb67v+vM1Dqntu+HUexQcsWKhhQa4ARVzxOY2HbC7QRW/ggkDBd5BU+uM1sV6XOAP0b216o34JQ==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vue/server-renderer/-/server-renderer-3.3.4.tgz}
     id: registry.npmmirror.com/@vue/server-renderer/3.3.4
     name: '@vue/server-renderer'
@@ -3130,7 +3120,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': registry.npmmirror.com/@vue/compiler-ssr@3.3.4
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
-      vue: registry.npmmirror.com/vue@3.3.4
+      vue: registry.npmmirror.com/vue@2.6.14
 
   registry.npmmirror.com/@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vue/shared/-/shared-3.3.4.tgz}
@@ -6322,7 +6312,7 @@ packages:
     hasBin: true
     dependencies:
       async: registry.npmmirror.com/async@3.2.4
-      chalk: registry.npmmirror.com/chalk@4.1.2
+      chalk: registry.npmmirror.com/chalk@4.1.0
       filelist: registry.npmmirror.com/filelist@1.0.4
       minimatch: registry.npmmirror.com/minimatch@3.1.2
     dev: true
@@ -6333,7 +6323,7 @@ packages:
     version: 29.6.1
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      chalk: registry.npmmirror.com/chalk@4.1.2
+      chalk: registry.npmmirror.com/chalk@4.1.0
       diff-sequences: registry.npmmirror.com/diff-sequences@29.4.3
       jest-get-type: registry.npmmirror.com/jest-get-type@29.4.3
       pretty-format: registry.npmmirror.com/pretty-format@29.6.1
@@ -7520,7 +7510,7 @@ packages:
       '@yarnpkg/parsers': registry.npmmirror.com/@yarnpkg/parsers@3.0.0-rc.46
       '@zkochan/js-yaml': registry.npmmirror.com/@zkochan/js-yaml@0.0.6
       axios: registry.npmmirror.com/axios@1.4.0
-      chalk: registry.npmmirror.com/chalk@4.1.2
+      chalk: registry.npmmirror.com/chalk@4.1.0
       cli-cursor: registry.npmmirror.com/cli-cursor@3.1.0
       cli-spinners: registry.npmmirror.com/cli-spinners@2.6.1
       cliui: registry.npmmirror.com/cliui@7.0.4
@@ -9527,7 +9517,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents@2.3.2
     dev: false
 
-  registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4):
+  registry.npmmirror.com/vue-demi@0.14.5(@vue/composition-api@1.7.1)(vue@2.6.14):
     resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.5.tgz}
     id: registry.npmmirror.com/vue-demi/0.14.5
     name: vue-demi
@@ -9542,7 +9532,8 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: registry.npmmirror.com/vue@3.3.4
+      '@vue/composition-api': registry.npmmirror.com/@vue/composition-api@1.7.1(vue@2.6.14)
+      vue: registry.npmmirror.com/vue@2.6.14
     dev: false
 
   registry.npmmirror.com/vue-eslint-parser@9.3.1(eslint@8.45.0):
@@ -9612,15 +9603,6 @@ packages:
     name: vue
     version: 2.6.14
 
-  registry.npmmirror.com/vue@2.7.10:
-    resolution: {integrity: sha512-HmFC70qarSHPXcKtW8U8fgIkF6JGvjEmDiVInTkKZP0gIlEPhlVlcJJLkdGIDiNkIeA2zJPQTWJUI4iWe+AVfg==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/vue/-/vue-2.7.10.tgz}
-    name: vue
-    version: 2.7.10
-    dependencies:
-      '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc@2.7.10
-      csstype: registry.npmmirror.com/csstype@3.1.2
-    dev: false
-
   registry.npmmirror.com/vue@2.7.14:
     resolution: {integrity: sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/vue/-/vue-2.7.14.tgz}
     name: vue
@@ -9637,7 +9619,7 @@ packages:
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom@3.3.4
       '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc@3.3.4
       '@vue/runtime-dom': registry.npmmirror.com/@vue/runtime-dom@3.3.4
-      '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer@3.3.4(vue@3.3.4)
+      '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer@3.3.4(vue@2.6.14)
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
 
   registry.npmmirror.com/wcwidth@1.0.1:
