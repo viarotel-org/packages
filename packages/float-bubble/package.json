@@ -84,5 +84,6 @@
     "vue2": "npm:vue@~2.6.14",
     "vue2s": "npm:vue@^2.7.14",
     "vue3": "npm:vue@^3.3.4"
-  }
+  },
+  "gitHead": "e110228dcf5e558696996632bfbb50802a6e5f16"
 }

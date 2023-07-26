@@ -42,5 +42,6 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.53.5"
-  }
+  },
+  "gitHead": "e110228dcf5e558696996632bfbb50802a6e5f16"
 }

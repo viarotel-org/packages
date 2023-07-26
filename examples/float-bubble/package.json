@@ -2,9 +2,6 @@
   "name": "float-bubble",
   "private": true,
   "description": "float-bubble examples",
-  "scripts": {
-    "build": "node ./index.js"
-  },
   "dependencies": {
     "@viarotel-org/float-bubble": "workspace:^",
     "@viarotel-org/scripts": "workspace:^"

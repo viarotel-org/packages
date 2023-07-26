@@ -44,5 +44,6 @@
     "postcss-nested": "^6.0.1",
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6"
-  }
+  },
+  "gitHead": "e110228dcf5e558696996632bfbb50802a6e5f16"
 }
