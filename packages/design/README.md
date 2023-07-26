@@ -4,6 +4,6 @@
 
 ## Usage
 
-```
-import '@viarotel-org/design';
+```js
+import '@viarotel-org/design'
 ```

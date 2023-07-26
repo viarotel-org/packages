@@ -48,14 +48,7 @@ export default {
       ],
     }
   },
-  methods: {
-    onAdsorb(event) {
-      console.log('onAdsorb.event', event)
-    },
-    onUnadsorb(event) {
-      console.log('onUnadsorb.event', event)
-    },
-  },
+  methods: {},
 }
 </script>
 
