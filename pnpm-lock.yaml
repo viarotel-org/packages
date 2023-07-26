@@ -54,7 +54,7 @@ importers:
   packages/float-bubble:
     dependencies:
       '@viarotel-org/design':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../design
       '@vue/composition-api':
         specifier: ^1.7.1
@@ -70,13 +70,13 @@ importers:
         version: registry.npmmirror.com/vue-demi@0.14.5(@vue/composition-api@1.7.1)(vue@2.6.14)
     devDependencies:
       '@viarotel-org/postcss-config':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../postcss-config
       '@viarotel-org/unocss-config':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../unocss-config
       '@viarotel-org/vite-config-vue':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../vite-config-vue
       cross-env:
         specifier: ^7.0.3
@@ -137,13 +137,13 @@ importers:
   packages/vite-config-vue:
     dependencies:
       '@viarotel-org/vite-config-vue2':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../vite-config-vue2
       '@viarotel-org/vite-config-vue2s':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../vite-config-vue2s
       '@viarotel-org/vite-config-vue3':
-        specifier: workspace:^
+        specifier: ^0.5.1
         version: link:../vite-config-vue3
     devDependencies:
       unbuild:

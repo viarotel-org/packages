@@ -21,12 +21,7 @@
     ".": {
       "import": "./styles/desktop/index.js"
     },
-    "./*": "./*",
-    "./styles/base": "./styles/base/index.js",
-    "./styles/desktop": "./styles/desktop/index.js",
-    "./styles/mobile": "./styles/mobile/index.js",
-    "./styles/applet": "./styles/applet/index.js",
-    "./styles/vars": "./styles/vars/index.js"
+    "./*": "./*"
   },
   "main": "./styles/desktop/index.js",
   "module": "./styles/desktop/index.js",
@@ -43,5 +38,5 @@
   "dependencies": {
     "@unocss/reset": "^0.53.5"
   },
-  "gitHead": "e110228dcf5e558696996632bfbb50802a6e5f16"
+  "gitHead": "06c93c87769079a8837c3e7612448ffbaa80191c"
 }
