@@ -21,7 +21,7 @@
     "version": {
       "ignoreChanges": [
         "**/__tests__/**",
-        "**/__tests__/**",
+        "**/examples/**",
         "**/*.md"
       ],
       "changelogPreset": "angular",
