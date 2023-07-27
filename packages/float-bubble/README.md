@@ -73,7 +73,7 @@ Vue.use(FloatBubble)
 </FloatBubble>
 ```
 
-## props
+## Props
 
 ```js
 // FloatBubble 的默认 props
