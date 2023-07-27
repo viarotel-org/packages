@@ -18,9 +18,9 @@
         :class="[bubbleClass]"
       >
         <span v-if="text">{{ text }}</span>
-        <img v-else-if="image" :src="image" alt="" class="w-2/3">
+        <img v-else-if="image" :src="image" alt="" class="w-2/3" />
         <span v-else class="text-center">
-          {{ writeOffset.x }} <br>
+          {{ writeOffset.x }} <br />
           {{ writeOffset.y }}
         </span>
       </div>
@@ -30,7 +30,7 @@
 
 <script>
 import { debounce } from 'lodash-es'
-import { createWriteProps } from '@/utils/index.js'
+import createWriteProps from '@viarotel-org/utils/createWriteProps'
 
 const writeProps = createWriteProps(['offset'])
 

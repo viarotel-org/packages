@@ -23,13 +23,9 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     },
-    "./vue3": "./dist/vue3.mjs",
-    "./vue2s": "./dist/vue2s.mjs",
-    "./vue2": "./dist/vue2.mjs",
-    "./vue3/common": "./dist/vue3.cjs",
-    "./vue2s/common": "./dist/vue2s.cjs",
-    "./vue2/common": "./dist/vue2.cjs",
-    "./*": "./*"
+    "./*": "./dist/*",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",

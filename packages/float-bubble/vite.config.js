@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { loadEnv } from 'vite'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
-import resolveConfig from '@viarotel-org/vite-config-vue'
+import extendConfig from '@viarotel-org/vite-config-vue'
 import postcssConfig from '@viarotel-org/postcss-config'
 
 export default ({ mode }) => {
@@ -11,9 +11,9 @@ export default ({ mode }) => {
   const version = env.VITE_VUE_VERSION
   console.log('version', version)
 
-  const exampled = mode === 'example'
+  const demoMode = mode === 'demo'
   let buildConfig = {}
-  if (!exampled) {
+  if (!demoMode) {
     buildConfig = {
       lib: {
         entry: resolve(__dirname, 'src/libs/index.js'),
@@ -31,7 +31,7 @@ export default ({ mode }) => {
     }
   }
 
-  return resolveConfig({
+  return extendConfig({
     version,
     // @ts-expect-error
     plugins: [useEslint(), useUnoCSS()],

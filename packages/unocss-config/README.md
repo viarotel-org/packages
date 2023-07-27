@@ -6,6 +6,4 @@
 
 ```
 import unocssConfig from '@viarotel-org/unocss-config';
-
-// TODO: DEMONSTRATE API
 ```

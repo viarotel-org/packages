@@ -3,7 +3,7 @@ import { defineBuildConfig } from 'unbuild'
 export default defineBuildConfig({
   entries: [
     './src/index',
-    ...['base'].map(name => ({
+    ...['createComposeWriteProps', 'createWriteProps'].map(name => ({
       name,
       input: `./src/${name}/index.js`,
       outDir: './dist',
@@ -14,10 +14,5 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
   },
-  externals: [
-    '@bundled-es-modules/deepmerge',
-    'postcss-nested',
-    'postcss-remove-inline-comments',
-    'postcss-scss',
-  ],
+  externals: ['vue', 'lodash-es'],
 })

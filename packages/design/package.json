@@ -19,17 +19,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./styles/desktop/index.js"
+      "import": "./styles/base/index.js"
     },
-    "./styles/base": "./styles/base/index.js",
-    "./styles/desktop": "./styles/desktop/index.js",
-    "./styles/mobile": "./styles/mobile/index.js",
-    "./styles/applet": "./styles/applet/index.js",
-    "./styles/vars": "./styles/vars/index.js",
+    "./styles/*": "./styles/*/index.js",
     "./*": "./*"
   },
-  "main": "./styles/desktop/index.js",
-  "module": "./styles/desktop/index.js",
+  "main": "./styles/base/index.js",
+  "module": "./styles/base/index.js",
   "directories": {
     "lib": "styles"
   },

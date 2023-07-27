@@ -19,15 +19,15 @@
   ],
   "exports": {
     ".": {
-      "require": "./node/common/index.js",
-      "import": "./node/module/index.js"
+      "require": "./cjs/index.js",
+      "import": "./esm/index.js"
     },
     "./*": "./*"
   },
-  "main": "./node/common/index.js",
-  "module": "./node/module/index.js",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
   "directories": {
-    "lib": "node"
+    "lib": "js"
   },
   "files": [
     "**/*",

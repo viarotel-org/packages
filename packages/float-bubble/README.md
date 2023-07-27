@@ -4,7 +4,7 @@
 
 Floating bubble components suitable for VUE2/3 suitable for PC -end support magnetic suction, custom style, automatic hiding edges and other functions
 
-[Demo 演示地址](https://float-bubble-demo.netlify.app/)
+[Demo 演示地址](https://float-bubble.netlify.app/)
 
 ## Install
 

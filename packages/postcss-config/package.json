@@ -22,7 +22,9 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     },
-    "./*": "./*"
+    "./*": "./dist/*",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",

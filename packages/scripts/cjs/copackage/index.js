@@ -1,7 +1,7 @@
 const path = require('node:path')
 const fs = require('fs-extra')
 
-async function copyPackage(
+async function copackage(
   sourcePath,
   targetPath = './dist',
   { basePath = process.cwd() },
@@ -15,4 +15,4 @@ async function copyPackage(
   })
 }
 
-module.exports = copyPackage
+module.exports = copackage

@@ -9,7 +9,7 @@
       "description": "viarotel's package",
       "access": "public",
       "private": false,
-      "esModule": true,
+      "esModule": false,
       "yes": true
     },
     "publish": {

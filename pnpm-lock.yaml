@@ -30,14 +30,30 @@ importers:
         specifier: ^7.1.4
         version: registry.npmmirror.com/lerna@7.1.4
 
-  examples/float-bubble:
+  examples/vite-vue2:
     dependencies:
+      '@viarotel-org/design':
+        specifier: workspace:^
+        version: link:../../packages/design
       '@viarotel-org/float-bubble':
         specifier: workspace:^
         version: link:../../packages/float-bubble
-      '@viarotel-org/scripts':
+      vue:
+        specifier: ~2.6.14
+        version: registry.npmmirror.com/vue@2.6.14
+    devDependencies:
+      '@viarotel-org/postcss-config':
         specifier: workspace:^
-        version: link:../../packages/scripts
+        version: link:../../packages/postcss-config
+      '@viarotel-org/unocss-config':
+        specifier: workspace:^
+        version: link:../../packages/unocss-config
+      '@viarotel-org/vite-config-vue2':
+        specifier: workspace:^
+        version: link:../../packages/vite-config-vue2
+      vite:
+        specifier: ^4.4.0
+        version: registry.npmmirror.com/vite@4.4.0
 
   packages/design:
     dependencies:
@@ -56,6 +72,9 @@ importers:
       '@viarotel-org/design':
         specifier: workspace:^
         version: link:../design
+      '@viarotel-org/utils':
+        specifier: workspace:^
+        version: link:../utils
       '@vue/composition-api':
         specifier: ^1.7.1
         version: registry.npmmirror.com/@vue/composition-api@1.7.1(vue@2.6.14)
@@ -133,6 +152,15 @@ importers:
       unbuild:
         specifier: latest
         version: registry.npmmirror.com/unbuild@1.2.1
+
+  packages/utils:
+    dependencies:
+      lodash-es:
+        specifier: ^4.17.21
+        version: registry.npmmirror.com/lodash-es@4.17.21
+      vue:
+        specifier: ^3.3.4
+        version: registry.npmmirror.com/vue@3.3.4
 
   packages/vite-config-vue:
     dependencies:
@@ -1465,7 +1493,7 @@ packages:
     version: 7.1.4
     engines: {node: ^14.17.0 || >=16.0.0}
     dependencies:
-      chalk: registry.npmmirror.com/chalk@4.1.0
+      chalk: registry.npmmirror.com/chalk@4.1.2
       execa: registry.npmmirror.com/execa@5.0.0
       strong-log-transformer: registry.npmmirror.com/strong-log-transformer@2.1.0
     dev: true
@@ -6312,7 +6340,7 @@ packages:
     hasBin: true
     dependencies:
       async: registry.npmmirror.com/async@3.2.4
-      chalk: registry.npmmirror.com/chalk@4.1.0
+      chalk: registry.npmmirror.com/chalk@4.1.2
       filelist: registry.npmmirror.com/filelist@1.0.4
       minimatch: registry.npmmirror.com/minimatch@3.1.2
     dev: true
@@ -6323,7 +6351,7 @@ packages:
     version: 29.6.1
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      chalk: registry.npmmirror.com/chalk@4.1.0
+      chalk: registry.npmmirror.com/chalk@4.1.2
       diff-sequences: registry.npmmirror.com/diff-sequences@29.4.3
       jest-get-type: registry.npmmirror.com/jest-get-type@29.4.3
       pretty-format: registry.npmmirror.com/pretty-format@29.6.1
@@ -7510,7 +7538,7 @@ packages:
       '@yarnpkg/parsers': registry.npmmirror.com/@yarnpkg/parsers@3.0.0-rc.46
       '@zkochan/js-yaml': registry.npmmirror.com/@zkochan/js-yaml@0.0.6
       axios: registry.npmmirror.com/axios@1.4.0
-      chalk: registry.npmmirror.com/chalk@4.1.0
+      chalk: registry.npmmirror.com/chalk@4.1.2
       cli-cursor: registry.npmmirror.com/cli-cursor@3.1.0
       cli-spinners: registry.npmmirror.com/cli-spinners@2.6.1
       cliui: registry.npmmirror.com/cliui@7.0.4

@@ -1,0 +1,21 @@
+{
+  "name": "vite-vue2",
+  "private": true,
+  "description": "vite-vue2 examples",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@viarotel-org/design": "workspace:^",
+    "@viarotel-org/float-bubble": "workspace:^",
+    "vue": "~2.6.14"
+  },
+  "devDependencies": {
+    "@viarotel-org/postcss-config": "workspace:^",
+    "@viarotel-org/unocss-config": "workspace:^",
+    "@viarotel-org/vite-config-vue2": "workspace:^",
+    "vite": "^4.4.0"
+  }
+}
