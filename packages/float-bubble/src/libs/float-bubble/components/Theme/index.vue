@@ -9,6 +9,7 @@ export default {
   components: {
     ThemeMenu,
   },
+  inheritAttrs: false,
   props: {
     type: {
       type: String,
