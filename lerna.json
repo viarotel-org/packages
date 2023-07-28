@@ -4,6 +4,7 @@
   "npmClient": "pnpm",
   "command": {
     "create": {
+      "license": "MIT",
       "homepage": "https://github.com/viarotel-org/packages#readme",
       "registry": "https://registry.npmjs.org/",
       "description": "viarotel's package",

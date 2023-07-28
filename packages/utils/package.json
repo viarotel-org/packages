@@ -3,7 +3,7 @@
   "version": "0.5.5",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@qq.com>",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/utils#readme",
   "repository": {
     "type": "git",

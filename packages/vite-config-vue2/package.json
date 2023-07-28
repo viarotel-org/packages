@@ -3,7 +3,7 @@
   "version": "0.5.2",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@qq.com>",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-config-vue2#readme",
   "repository": {
     "type": "git",

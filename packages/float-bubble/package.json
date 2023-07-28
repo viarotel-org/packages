@@ -4,7 +4,7 @@
   "version": "0.5.7",
   "description": "Vue-based Float-Bubble component",
   "author": "viarotel <viarotel@qq.com>",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/float-bubble",
   "repository": {
     "type": "git",
