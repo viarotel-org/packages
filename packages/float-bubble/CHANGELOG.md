@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.6](https://github.com/viarotel-org/packages/compare/v0.5.5...v0.5.6) (2023-07-28)
+
+
+### Bug Fixes
+
+* 修复浮动气泡UMD格式包不可用的问题 ([de0a2a9](https://github.com/viarotel-org/packages/commit/de0a2a977f4dc7f4536eb2b90b83a075a3d70d51))
+
+
+
+
+
+
 ## [0.5.5](https://github.com/viarotel-org/packages/compare/v0.5.4...v0.5.5) (2023-07-27)
 
 
