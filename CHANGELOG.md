@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/viarotel-org/packages/compare/v0.5.6...v0.5.7) (2023-07-28)
+
+
+### Bug Fixes
+
+* 修复主题样式丢失的问题以及属性继承问题 ([e7b7f23](https://github.com/viarotel-org/packages/commit/e7b7f23b14064ab1e684e88562a9b37a9d687ecf))
+
+
+
+
+
 ## [0.5.6](https://github.com/viarotel-org/packages/compare/v0.5.5...v0.5.6) (2023-07-28)
 
 
