@@ -23,9 +23,9 @@ export default ({ mode }) => {
       },
       rollupOptions: {
         external: ['vue', 'vue-demi'],
-        output: {
-          exports: 'named',
-          manualChunks: undefined,
+        globals: {
+          'vue': 'Vue',
+          'vue-demi': 'VueDemi',
         },
       },
     }
