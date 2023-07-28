@@ -1,2 +1,2 @@
-import '@viarotel-org/design/styles/desktop'
+import '@viarotel-org/design/styles/base'
 import './iconfont.css'

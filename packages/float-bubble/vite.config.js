@@ -23,9 +23,11 @@ export default ({ mode }) => {
       },
       rollupOptions: {
         external: ['vue', 'vue-demi'],
-        globals: {
-          'vue': 'Vue',
-          'vue-demi': 'VueDemi',
+        output: {
+          globals: {
+            'vue': 'Vue',
+            'vue-demi': 'VueDemi',
+          },
         },
       },
     }
@@ -42,9 +44,6 @@ export default ({ mode }) => {
     },
     css: {
       postcss: postcssConfig,
-    },
-    optimizeDeps: {
-      exclude: ['vue-demi'],
     },
     build: {
       outDir: `dist/${mode}`,
