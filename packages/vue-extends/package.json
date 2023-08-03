@@ -1,0 +1,91 @@
+{
+  "name": "@viarotel-org/vue-extends",
+  "type": "module",
+  "version": "0.5.8",
+  "description": "extends vue",
+  "author": "viarotel <viarotel@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vue-extends",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viarotel-org/packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viarotel-org/packages/issues"
+  },
+  "keywords": [
+    "vite",
+    "vue",
+    "float",
+    "bubble",
+    "magnetic",
+    "component"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/vue3/vue-extends.cjs",
+      "import": "./dist/vue3/vue-extends.js"
+    },
+    "./style": "./dist/vue3/style.css",
+    "./vue3": "./dist/vue3/vue-extends.js",
+    "./vue2s": "./dist/vue2s/vue-extends.js",
+    "./vue2": "./dist/vue2/vue-extends.js",
+    "./core": "./src/libs/vue-extends/index.js",
+    "./vue2/common": "./dist/vue2/vue-extends.cjs",
+    "./vue2/browser": "./dist/vue2/vue-extends.umd.cjs",
+    "./vue2s/common": "./dist/vue2s/vue-extends.cjs",
+    "./vue2s/browser": "./dist/vue2s/vue-extends.umd.cjs",
+    "./vue3/common": "./dist/vue3/vue-extends.cjs",
+    "./vue3/browser": "./dist/vue3/vue-extends.umd.cjs",
+    "./*": "./*"
+  },
+  "main": "./dist/vue3/vue-extends.cjs",
+  "module": "./dist/vue3/vue-extends.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "tag": "latest"
+  },
+  "scripts": {
+    "dev": "pnpm dev:3",
+    "dev:3": "pnpm switch:3 && vite --mode vue3",
+    "dev:2s": "pnpm switch:2s && vite --mode vue2s",
+    "dev:2": "pnpm switch:2 && vite --mode vue2",
+    "build": "pnpm build:3 && pnpm build:2s && pnpm build:2 && pnpm build:demo",
+    "build:3": "pnpm switch:3 && vite build --mode vue3",
+    "build:2s": "pnpm switch:2s && vite build --mode vue2s",
+    "build:2": "pnpm switch:2 && vite build --mode vue2",
+    "build:demo": "pnpm switch:2 && vite build --mode demo",
+    "switch:3": "vue-demi-switch 3 vue3",
+    "switch:2s": "vue-demi-switch 2.7 vue2s",
+    "switch:2": "vue-demi-switch 2 vue2",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.7.1",
+    "vue": "^2.6.14 || ^3.3.4"
+  },
+  "dependencies": {
+    "@viarotel-org/design": "workspace:^",
+    "@viarotel-org/float-bubble": "workspace:^",
+    "@viarotel-org/utils": "workspace:^",
+    "lodash-es": "^4.17.21",
+    "vue-demi": "latest"
+  },
+  "devDependencies": {
+    "@viarotel-org/postcss-config": "workspace:^",
+    "@viarotel-org/unocss-config": "workspace:^",
+    "@viarotel-org/vite-config-vue": "workspace:^",
+    "cross-env": "^7.0.3",
+    "vite": "^4.4.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue2": "npm:vue@~2.6.14",
+    "vue2s": "npm:vue@^2.7.14",
+    "vue3": "npm:vue@^3.3.4"
+  },
+  "gitHead": "06c93c87769079a8837c3e7612448ffbaa80191c"
+}

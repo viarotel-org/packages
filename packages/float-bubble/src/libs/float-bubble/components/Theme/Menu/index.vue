@@ -32,7 +32,11 @@
             :class="[item.class]"
           />
 
-          <span v-if="item.text" class="text-sm pt-[2px]">
+          <span
+            v-if="item.text"
+            class="text-sm pt-[2px]"
+            :class="item.textClass"
+          >
             {{ item.text }}
           </span>
         </div>

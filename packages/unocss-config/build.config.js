@@ -3,7 +3,7 @@ import { defineBuildConfig } from 'unbuild'
 export default defineBuildConfig({
   entries: [
     './src/index',
-    ...['applet', 'base', 'desktop'].map(name => ({
+    ...['applet', 'base', 'desktop', 'daisy'].map(name => ({
       name,
       input: `./src/${name}/index.js`,
       outDir: './dist',

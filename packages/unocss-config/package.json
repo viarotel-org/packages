@@ -43,8 +43,10 @@
   },
   "dependencies": {
     "@unocss/transformer-directives": "^0.53.5",
+    "daisyui": "^3.5.0",
     "unocss": "^0.53.5",
-    "unocss-applet": "^0.5.3"
+    "unocss-applet": "^0.5.3",
+    "unocss-preset-daisy": "^6.0.0"
   },
   "devDependencies": {
     "unbuild": "latest"

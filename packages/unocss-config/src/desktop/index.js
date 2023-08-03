@@ -5,7 +5,6 @@ function presetConfig(...configs) {
   return mergeConfigs([
     baseConfig(),
     {
-      name: 'desktopPreset',
       presets: [],
       theme: {
         boxShadow: {

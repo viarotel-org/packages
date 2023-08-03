@@ -13,6 +13,7 @@ export default {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/quotes': 'off',
     '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/no-invalid-this': 'off',
     // vue
     'vue/no-unused-refs': 'off',
     'vue/component-tags-order': 'off',

@@ -7,6 +7,10 @@
   border-color: #e5e7eb; /* 2 */
 }
 
+body {
+  margin: 0; /* 1 */
+}
+
 html {
   font-size: 14px;
 }

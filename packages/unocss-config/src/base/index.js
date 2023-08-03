@@ -19,7 +19,6 @@ function presetConfig(...configs) {
   const windConfig = presetWind()
   return mergeConfigs([
     {
-      name: 'basePreset',
       presets: [windConfig],
       theme: {
         colors: {
