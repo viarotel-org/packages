@@ -1,6 +1,11 @@
 <template>
-  <div class="pt-4">
-    This is Child
+  <div class="pt-4 flex flex-col items-center">
+    <div class="">
+      {{ text }}
+    </div>
+    <button class="btn btn-accent block mt-4" @click="handleClick">
+      change text
+    </button>
   </div>
 </template>
 
@@ -8,7 +13,9 @@
 export default {
   name: 'Child',
   data() {
-    return {}
+    return {
+      text: 'This is Child',
+    }
   },
   beforeCreate() {
     console.log('Trigger beforeCreate', this)
@@ -21,6 +28,11 @@ export default {
   },
   mounted() {
     console.log('Trigger mounted', this)
+  },
+  methods: {
+    handleClick() {
+      this.text = 'Changed text'
+    },
   },
 }
 </script>

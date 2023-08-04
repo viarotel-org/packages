@@ -1,19 +1,20 @@
 /**
  * @param {*} context 自定义当前执行环境
  */
-export default async function rehook({ context = this, hooks } = {}) {
+export default async function rehook(params, { context = this } = {}) {
   await context.$nextTick()
 
-  const defaultHooks = ['beforeCreate', 'created', 'beforeMount', 'mounted']
+  const hooks = []
 
-  if (typeof hooks === 'function') {
-    hooks = hooks(defaultHooks)
+  if (typeof params === 'string') {
+    hooks.push(...params.split(','))
   }
-  else if (Array.isArray(hooks)) {
-    hooks = [...hooks]
+  else if (Array.isArray(params)) {
+    hooks.push(...params)
   }
-  else {
-    hooks = [...defaultHooks]
+
+  if (!hooks.length) {
+    hooks.push('beforeCreate', 'created', 'beforeMount', 'mounted')
   }
 
   hooks.forEach((key) => {

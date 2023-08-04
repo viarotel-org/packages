@@ -9,6 +9,7 @@
     "enable": true
   },
   "eslint.validate": [
+    // "jsonc",
     "javascript",
     "javascriptreact",
     "typescript",
@@ -16,8 +17,8 @@
     "vue",
     "html",
     "markdown",
-    "jsonc",
     "json",
     "yaml"
-  ]
+  ],
+  "unocss.root": ["packages/float-bubble", "packages/vue-extends"]
 }
