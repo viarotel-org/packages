@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/float-bubble",
   "type": "module",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Vue-based Float-Bubble component",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
