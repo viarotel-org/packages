@@ -1,5 +1,7 @@
 {
   "name": "packages",
+  "private": true,
+  "packageManager": "pnpm@8.6.12",
   "description": "viarotel's packages",
   "scripts": {
     "lint": "pnpm lint:js",
