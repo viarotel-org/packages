@@ -17,27 +17,12 @@
     "config",
     "preset"
   ],
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    },
-    "./*": "./*"
-  },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "directories": {
-    "lib": "dist"
-  },
+  "main": "index.js",
   "files": [
-    "dist",
-    "src"
+    "index.js"
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "build": "unbuild"
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.39.8"
