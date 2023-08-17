@@ -71,7 +71,6 @@
   },
   "dependencies": {
     "@viarotel-org/design": "workspace:^",
-    "@viarotel-org/float-bubble": "workspace:^",
     "@viarotel-org/utils": "workspace:^",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
