@@ -1,5 +1,6 @@
 {
   "name": "packages",
+  "packageManager": "pnpm@8.7.1",
   "description": "viarotel's packages",
   "scripts": {
     "lint": "pnpm lint:js",
@@ -12,7 +13,7 @@
     "@nx/nx-win32-x64-msvc": "^16.5.4",
     "@viarotel-org/eslint-config": "workspace:^",
     "eslint": "^8.45.0",
-    "lerna": "^7.1.4"
+    "lerna": "^7.2.0"
   },
   "pnpm": {
     "overrides": {
