@@ -1,4 +1,4 @@
-# `@viarotel-org/scripts`
+# @viarotel-org/scripts
 
 > viarotel's package
 

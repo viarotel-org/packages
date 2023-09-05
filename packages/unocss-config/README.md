@@ -1,4 +1,4 @@
-# `@viarotel-org/unocss-config`
+# @viarotel-org/unocss-config
 
 > viarotel's package
 

@@ -1,4 +1,4 @@
-# Float-Bubble
+# float-bubble
 
 适用于 PC 端的 vue2/3 的浮动气泡组件 支持磁吸、自定义样式、贴边自动隐藏等功能
 
