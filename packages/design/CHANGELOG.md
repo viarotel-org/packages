@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/viarotel-org/packages/compare/v0.6.1...v0.7.0) (2023-09-05)
+
+
+### Features
+
+* 🚀 unocss update ([073bec4](https://github.com/viarotel-org/packages/commit/073bec4f87dc68641fc15cefd5cc94320037e92e))
+
+
+
+
+
 # [0.6.0](https://github.com/viarotel-org/packages/compare/v0.5.11...v0.6.0) (2023-09-05)
 
 
