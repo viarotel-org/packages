@@ -9,7 +9,7 @@ function presetConfig(...configs) {
       presets: [windConfig, presetShades('#028d71')],
       theme: {
         colors: {
-          gray: windConfig.theme.colors.neutral,
+          gray: windConfig?.theme?.colors?.neutral,
         },
       },
       transformers: [transformerDirectives()],

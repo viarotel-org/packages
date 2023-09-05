@@ -12,9 +12,11 @@
   },
   "devDependencies": {
     "@nx/nx-win32-x64-msvc": "^16.5.4",
+    "@types/node": "^20.5.9",
     "@viarotel-org/eslint-config": "workspace:^",
     "eslint": "^8.45.0",
-    "lerna": "^7.2.0"
+    "lerna": "^7.2.0",
+    "typescript": "^5.2.2"
   },
   "pnpm": {
     "overrides": {

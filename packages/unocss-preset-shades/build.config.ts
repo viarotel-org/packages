@@ -1,14 +1,8 @@
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
-  entries: [
-    './src/index',
-    ...['helpers'].map(name => ({
-      name,
-      input: `./src/${name}.js`,
-      outDir: './dist',
-    })),
-  ],
+  entries: ['./src/index', './src/helpers'],
+  declaration: true,
   clean: true,
   failOnWarn: false,
   rollup: {

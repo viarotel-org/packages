@@ -1,5 +1,16 @@
 import Color from 'color'
 
+export interface ShadesOptions {
+  shades?: number[]
+  baseShade?: number
+  returnRgb?: boolean
+}
+
+interface ColorOptions {
+  [key: number]: string
+  DEFAULT: string
+}
+
 /**
  * 根据基础颜色生成不同深度的颜色
  * @param {string} colorValue 基础色值
@@ -9,18 +20,23 @@ import Color from 'color'
  * @returns
  */
 export function generateShades(
-  colorValue,
+  colorValue: string = '',
   {
     shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
     baseShade = 500,
     returnRgb = false,
-  } = {},
+  }: ShadesOptions = {},
 ) {
   const baseColor = Color(colorValue)
   // console.log('baseColor', baseColor)
 
-  const getColor = color =>
-    returnRgb ? color.round().color.join(',') : color.hex()
+  const getColor = (color: Color) => {
+    if (returnRgb) {
+      return color.round().array().join(',')
+    }
+
+    return color.hex()
+  }
 
   const value = shades.reduce(
     (obj, shadeValue) => {
@@ -41,7 +57,7 @@ export function generateShades(
     },
     {
       DEFAULT: getColor(baseColor),
-    },
+    } as ColorOptions,
   )
 
   // console.log('generateShades.value', value)
@@ -53,10 +69,10 @@ export function generateShades(
  * 更新主题色变量
  * @param {*} baseColor 新的基础色值
  */
-export function updateShades(baseColor) {
+export function updateShades(baseColor: string = '') {
   const shadeColors = generateShades(baseColor, { returnRgb: true })
 
-  const setProperty = (key, value) =>
+  const setProperty = (key: string = '', value: string = '') =>
     document.documentElement.style.setProperty(key, value)
 
   Object.entries(shadeColors).forEach(([weight, colorValue]) => {

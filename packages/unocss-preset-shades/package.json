@@ -42,6 +42,10 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "color": "^4.2.3"
+    "color": "^4.2.3",
+    "unocss": "^0.53.5"
+  },
+  "devDependencies": {
+    "@types/color": "^3.0.4"
   }
 }

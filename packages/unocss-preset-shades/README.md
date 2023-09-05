@@ -23,6 +23,7 @@ const unocssConfig = {
     presetShades(colorValue, {
       shades: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
       baseShade: 500,
+      primaryKey: 'primary'
     }),
   ],
 }
