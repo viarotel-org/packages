@@ -6,6 +6,9 @@
     <button class="btn btn-accent block mt-4" @click="handleClick">
       change text
     </button>
+    <div class="pt-2 text-gray-500">
+      请在控制台中查看效果
+    </div>
   </div>
 </template>
 

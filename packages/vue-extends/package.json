@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vue-extends",
   "type": "module",
-  "version": "0.5.9",
+  "version": "0.5.11",
   "description": "extends vue",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
@@ -71,7 +71,6 @@
   },
   "dependencies": {
     "@viarotel-org/design": "workspace:^",
-    "@viarotel-org/float-bubble": "workspace:^",
     "@viarotel-org/utils": "workspace:^",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"

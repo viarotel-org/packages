@@ -1,7 +1,9 @@
-export default {
+module.exports = {
   extends: ['@antfu'],
   rules: {
     // js
+    'prefer-promise-reject-errors': 'off',
+    'eqeqeq': 'off',
     'curly': 'off',
     'n/prefer-global/process': 'off',
     'unused-imports/no-unused-vars': 'off',
