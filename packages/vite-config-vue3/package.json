@@ -1,6 +1,6 @@
 {
   "name": "@viarotel-org/vite-config-vue3",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",

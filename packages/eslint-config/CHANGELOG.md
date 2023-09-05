@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/viarotel-org/packages/compare/v0.5.11...v0.6.0) (2023-09-05)
+
+**Note:** Version bump only for package @viarotel-org/eslint-config
+
+
+
+
+
+
 ## [0.5.10](https://github.com/viarotel-org/packages/compare/v0.5.9...v0.5.10) (2023-08-16)
 
 
