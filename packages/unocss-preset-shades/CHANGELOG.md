@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/viarotel-org/packages/compare/v0.6.0...v0.6.1) (2023-09-05)
+
+
+### Bug Fixes
+
+* 🔧 unocss-preset-shades 补全 ts 类型 以解决使用时编辑器报错的问题 ([5d5b63f](https://github.com/viarotel-org/packages/commit/5d5b63f303a2144cd97729893a87533dcbbc9ff9))
+
+
+
+
+
 # [0.6.0](https://github.com/viarotel-org/packages/compare/v0.5.11...v0.6.0) (2023-09-05)
 
 
