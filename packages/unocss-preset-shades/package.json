@@ -1,10 +1,10 @@
 {
-  "name": "@viarotel-org/unocss-config",
-  "version": "0.5.9",
+  "name": "@viarotel-org/unocss-preset-shades",
+  "version": "0.5.11",
   "description": "viarotel's package",
-  "author": "viarotel <viarotel@163.com>",
+  "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/unocss-config#readme",
+  "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/unocss-preset-shades#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viarotel-org/packages.git"
@@ -14,8 +14,11 @@
   },
   "keywords": [
     "unocss",
-    "config",
-    "preset"
+    "preset",
+    "shade",
+    "color",
+    "primary",
+    "theme"
   ],
   "exports": {
     ".": {
@@ -26,28 +29,19 @@
     "./dist/*": "./dist/*",
     "./src/*": "./src/*"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "files": [
     "dist",
     "src"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "unbuild"
   },
   "dependencies": {
-    "@unocss/transformer-directives": "^0.53.5",
-    "@viarotel-org/unocss-preset-shades": "workspace:^",
-    "daisyui": "^3.5.0",
-    "unocss": "^0.53.5",
-    "unocss-applet": "^0.5.3",
-    "unocss-preset-daisy": "^6.0.0"
-  },
-  "devDependencies": {
-    "unbuild": "latest"
-  },
-  "gitHead": "06c93c87769079a8837c3e7612448ffbaa80191c"
+    "color": "^4.2.3"
+  }
 }
