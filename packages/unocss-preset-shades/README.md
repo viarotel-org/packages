@@ -78,11 +78,11 @@ const unocssConfig = {
 }
 ```
 
-## 定制功能
+## 高级功能
 
 > 该预设提供 generateShades 以及 updateShades 方法来生成和更新颜色变量
 >
-> 如果需要自定义 primary 以及其他高级功能可使用该方法实现
+> 如果需要自定义配置以及其他高级功能可使用该方法实现
 
 ```js
 import {
