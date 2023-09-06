@@ -1,13 +1,8 @@
 import type { Preset } from 'unocss'
 import { generateShades } from './helpers'
-import type { ShadesOptions } from './helpers'
+import type { ColorOptions, ShadesOptions } from './helpers'
 
 export * from './helpers'
-
-interface ColorOptions {
-  [key: number]: string
-  DEFAULT: string
-}
 
 export interface PresetOptions extends ShadesOptions {
   primaryKey?: string
@@ -63,7 +58,7 @@ export function presetShades(
             }
             return obj
           },
-          {} as ColorOptions,
+          <ColorOptions>{},
         ),
       },
     },

@@ -6,7 +6,7 @@ export interface ShadesOptions {
   returnRgb?: boolean
 }
 
-interface ColorOptions {
+export interface ColorOptions {
   [key: number]: string
   DEFAULT: string
 }
