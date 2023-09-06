@@ -23,7 +23,7 @@ const unocssConfig = {
     presetShades(colorValue, {
       shades: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
       baseShade: 500,
-      primaryKey: 'primary'
+      primaryKey: 'primary',
     }),
   ],
 }
@@ -80,14 +80,14 @@ const unocssConfig = {
 
 ## 定制功能
 
-> 该预设提供 generateShades 以及 updateColor 方法来生成和更新颜色变量
+> 该预设提供 generateShades 以及 updateShades 方法来生成和更新颜色变量
 >
 > 如果需要自定义 primary 以及其他高级功能可使用该方法实现
 
 ```js
 import {
   generateShades,
-  updateColor,
+  updateShades,
 } from '@viarotel-org/unocss-preset-shades'
 
 const shades = generateShades(colorValue, {
@@ -111,5 +111,6 @@ const shades = generateShades(colorValue, {
 // }
 
 // 执行 updateShades 将会生成新的色组并更新 :root 上定义的色组变量
+// 注意: 小程序环境该方法尚未得到支持
 updateShades(newColorValue)
 ```
