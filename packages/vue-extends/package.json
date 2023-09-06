@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vue-extends",
   "type": "module",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "extends vue",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
