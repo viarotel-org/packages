@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/unocss-preset-shades",
   "version": "0.7.3",
-  "description": "viarotel's package",
+  "description": "🎨 为 Unocss 生成一组逐渐由浅至深的主题色调预设，通过提供基准颜色。",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/unocss-preset-shades#readme",
