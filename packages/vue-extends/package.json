@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vue-extends",
   "type": "module",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "🚀 用于增强 Vue 业务开发体验的扩展实现",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
