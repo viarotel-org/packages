@@ -2,7 +2,7 @@
   "name": "@viarotel-org/float-bubble",
   "type": "module",
   "version": "0.7.4",
-  "description": "Vue-based Float-Bubble component",
+  "description": "💬 适用于 Vue2/3 的 FloatBubble 组件",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/float-bubble",
