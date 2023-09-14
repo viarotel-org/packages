@@ -70,20 +70,21 @@
     "vue": "^2.6.14 || ^3.3.4"
   },
   "dependencies": {
-    "@viarotel-org/design": "workspace:^",
-    "@viarotel-org/utils": "workspace:^",
+    "@viarotel-org/design": "^0.7.0",
+    "@viarotel-org/utils": "^0.7.0",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
   },
   "devDependencies": {
-    "@viarotel-org/postcss-config": "workspace:^",
-    "@viarotel-org/unocss-config": "workspace:^",
-    "@viarotel-org/vite-config-vue": "workspace:^",
+    "@viarotel-org/postcss-config": "^0.7.0",
+    "@viarotel-org/unocss-config": "^0.7.4",
+    "@viarotel-org/vite-config-vue": "^0.7.0",
     "cross-env": "^7.0.3",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue2": "npm:vue@~2.6.14",
     "vue2s": "npm:vue@^2.7.14",
     "vue3": "npm:vue@^3.3.4"
-  }
+  },
+  "gitHead": "1d762a75d6330522543085feb2f819b64c34d107"
 }
