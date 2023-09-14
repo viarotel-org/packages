@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/viarotel-org/packages/compare/v0.7.6...v0.7.7) (2023-09-14)
+
+
+### Bug Fixes
+
+* 📝 修复描述错误的问题 ([c9bfe8f](https://github.com/viarotel-org/packages/commit/c9bfe8f0ab85e7d7bf1aea967024b3c748d0d08c))
+
+
+
+
+
 ## [0.7.6](https://github.com/viarotel-org/packages/compare/v0.7.5...v0.7.6) (2023-09-14)
 
 **Note:** Version bump only for package packages

@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/float-bubble",
   "type": "module",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "💬 适用于 Vue2/3 的浮动气泡组件",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
