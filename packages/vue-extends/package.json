@@ -80,6 +80,7 @@
     "@viarotel-org/unocss-config": "^0.7.4",
     "@viarotel-org/vite-config-vue": "^0.7.0",
     "cross-env": "^7.0.3",
+    "unbuild": "latest",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue2": "npm:vue@~2.6.14",

@@ -40,5 +40,8 @@
   "dependencies": {
     "lodash-es": "^4.17.21",
     "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "unbuild": "latest"
   }
 }

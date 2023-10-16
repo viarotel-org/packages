@@ -46,6 +46,7 @@
     "unocss": "^0.55.3"
   },
   "devDependencies": {
-    "@types/color": "^3.0.4"
+    "@types/color": "^3.0.4",
+    "unbuild": "latest"
   }
 }
