@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/viarotel-org/packages/compare/v0.7.7...v0.8.0) (2023-10-16)
+
+
+### Features
+
+* 🚀 新增 vite-plugin-path 包 ([daa41fb](https://github.com/viarotel-org/packages/commit/daa41fb718c883ea6aac0229af0ff2a08a65af71))
+
+
+
+
+
 ## [0.7.4](https://github.com/viarotel-org/packages/compare/v0.7.3...v0.7.4) (2023-09-08)
 
 **Note:** Version bump only for package @viarotel-org/unocss-preset-shades
