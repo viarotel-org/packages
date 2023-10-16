@@ -13,12 +13,13 @@
     "url": "https://github.com/viarotel-org/packages/issues"
   },
   "keywords": [
-    "unocss",
-    "preset",
-    "shade",
-    "color",
-    "primary",
-    "theme"
+    "vite",
+    "plugin",
+    "path",
+    "absolute",
+    "resolve",
+    "binary",
+    "import"
   ],
   "exports": {
     ".": {
