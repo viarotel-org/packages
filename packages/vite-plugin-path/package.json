@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vite-plugin-path",
   "version": "0.8.0",
-  "description": "一个用于 Vitejs 的插件，可以返回任意文件的绝对路径。",
+  "description": "🔍 一个用于 Vitejs 的插件，可以返回任意文件的绝对路径。",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/viarotel-org/packages/tree/main/packages/vite-plugin-path#readme",
