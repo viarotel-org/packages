@@ -39,10 +39,10 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@unocss/transformer-directives": "^0.55.3",
+    "@unocss/transformer-directives": "^0.57.5",
     "@viarotel-org/unocss-preset-shades": "workspace:^",
     "daisyui": "^3.5.0",
-    "unocss": "^0.55.3",
+    "unocss": "^0.57.5",
     "unocss-applet": "^0.5.5",
     "unocss-preset-daisy": "^6.0.0"
   },

@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "unocss": "^0.55.3"
+    "unocss": "^0.57.5"
   },
   "devDependencies": {
     "@types/color": "^3.0.4"

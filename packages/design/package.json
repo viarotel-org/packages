@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/reset": "^0.55.3"
+    "@unocss/reset": "^0.57.5"
   },
   "gitHead": "06c93c87769079a8837c3e7612448ffbaa80191c"
 }
