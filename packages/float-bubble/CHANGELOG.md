@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [](https://github.com/viarotel-org/packages/compare/v0.7.7...v0.8.0) (2023-10-16)
+
+**Note:** Version bump only for package @viarotel-org/float-bubble
+
+
+
+
+
+
 # [](https://github.com/viarotel-org/packages/compare/v0.7.6...v0.7.7) (2023-09-14)
 
 

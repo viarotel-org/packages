@@ -1,6 +1,6 @@
 {
   "name": "@viarotel-org/postcss-config",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "viarotel's package",
   "author": "viarotel <viarotel@163.com>",
   "license": "MIT",
@@ -46,6 +46,9 @@
     "postcss-nested": "^6.0.1",
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6"
+  },
+  "devDependencies": {
+    "unbuild": "latest"
   },
   "gitHead": "06c93c87769079a8837c3e7612448ffbaa80191c"
 }

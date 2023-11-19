@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vue-extends",
   "type": "module",
-  "version": "0.7.6",
+  "version": "0.8.0",
   "description": "🚀 用于增强 Vue 业务开发体验的扩展实现",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
@@ -70,16 +70,17 @@
     "vue": "^2.6.14 || ^3.3.4"
   },
   "dependencies": {
-    "@viarotel-org/design": "^0.7.0",
-    "@viarotel-org/utils": "^0.7.0",
+    "@viarotel-org/design": "^0.8.0",
+    "@viarotel-org/utils": "^0.8.0",
     "lodash-es": "^4.17.21",
     "vue-demi": "latest"
   },
   "devDependencies": {
-    "@viarotel-org/postcss-config": "^0.7.0",
-    "@viarotel-org/unocss-config": "^0.7.4",
-    "@viarotel-org/vite-config-vue": "^0.7.0",
+    "@viarotel-org/postcss-config": "^0.8.0",
+    "@viarotel-org/unocss-config": "^0.8.0",
+    "@viarotel-org/vite-config-vue": "^0.8.0",
     "cross-env": "^7.0.3",
+    "unbuild": "latest",
     "vite": "^4.4.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue2": "npm:vue@~2.6.14",
