@@ -1,7 +1,7 @@
 {
   "name": "@viarotel-org/vue-extends",
   "type": "module",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "🚀 用于增强 Vue 业务开发体验的扩展实现",
   "author": "viarotel <viarotel@qq.com>",
   "license": "MIT",
@@ -77,7 +77,7 @@
   },
   "devDependencies": {
     "@viarotel-org/postcss-config": "^0.8.2",
-    "@viarotel-org/unocss-config": "^0.8.2",
+    "@viarotel-org/unocss-config": "^0.8.3",
     "@viarotel-org/vite-config-vue": "^0.8.2",
     "cross-env": "^7.0.3",
     "unbuild": "latest",
