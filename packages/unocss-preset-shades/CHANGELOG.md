@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/viarotel-org/packages/compare/v0.8.2...v0.8.3) (2023-12-26)
+
+
+### Bug Fixes
+
+* 🐛 修复 unocss-preset-shades 层级问题 ([ab1ae0f](https://github.com/viarotel-org/packages/commit/ab1ae0f5443427fdb101885bedf3baa228113002))
+
+
+
+
+
+
 ## [0.8.2](https://github.com/viarotel-org/packages/compare/v0.8.1...v0.8.2) (2023-11-19)
 
 **Note:** Version bump only for package @viarotel-org/unocss-preset-shades
