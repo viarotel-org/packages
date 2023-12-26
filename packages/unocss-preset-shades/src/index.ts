@@ -1,6 +1,6 @@
 import type { Preset } from 'unocss'
-import { generateShades } from './helpers'
 import type { ColorOptions, ShadesOptions } from './helpers'
+import { generateShades } from './helpers'
 
 export * from './helpers'
 
@@ -23,6 +23,7 @@ export function presetShades(
     name: 'presetShades',
     preflights: [
       {
+        layer: 'preflights',
         getCSS: () => {
           const vars = shadeList.reduce((style, [key, value]) => {
             if (key === 'DEFAULT') {
